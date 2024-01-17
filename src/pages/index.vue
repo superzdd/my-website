@@ -30,20 +30,33 @@ const { profile } = sourceData
       <br>
 
       <div class="icon-neusoft" />
-      <img src="/imgs/herdsric-logo.jpg" alt="herdsric">
-
-      <p>从事程序员和项目经理的工作。在上海虹桥塔台，复星，阿里巴巴，还有上汽的整车中都留下过我工作的痕迹。</p>
-
-      <br>
-      <p>我目前关注前端领域，熟悉原生和Vue框架，今后会不断探索Stable Diffusion以及机器学习的相关技术和项目</p>
-
-      <p>我平时的兴趣是运动，看书和打游戏。同时我是NBA，任天堂的超级粉丝，如果你也这些方面的话题，我会非常高兴和你聊天。</p>
+      <img src="/imgs/final/wonders.png" alt="wonders">
+      <img src="/imgs/final/neusoft.png" alt="neusoft">
+      <img src="/imgs/final/herdsric.png" alt="herdsric">
+      <img src="/imgs/final/bosch.png" alt="bosch">
 
       <p>
-        Find me on
+        从事程序员和项目经理的工作。在上海虹桥塔台，复星，阿里巴巴，还有上汽的整车中都留下过我工作的痕迹。
       </p>
+
+      <br>
+      <p>
+        我目前关注前端领域，熟悉原生和Vue框架，今后会不断探索Stable
+        Diffusion以及机器学习的相关技术和项目
+      </p>
+
+      <p>
+        我平时的兴趣是运动，看书和打游戏。同时我是NBA，任天堂的超级粉丝，如果你也这些方面的话题，我会非常高兴和你聊天。
+      </p>
+
+      <p>Find me on</p>
       <p flex="~ gap-3 wrap" class="mt--2!">
-        <AppLink i-carbon-logo-github op75 icon-btn to="https://github.com/superzdd">
+        <AppLink
+          i-carbon-logo-github
+          op75
+          icon-btn
+          to="https://github.com/superzdd"
+        >
           Github
         </AppLink>
       </p>
@@ -55,7 +68,7 @@ const { profile } = sourceData
 
 <style>
 .icon-neusoft {
-  background-image: url('/imgs/neusoft-logo.svg');
+  background-image: url('/favicon.svg');
   width: 100px;
   height: 100px;
 }
