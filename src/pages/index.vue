@@ -1,75 +1,101 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import sourceData from '~/data.json'
-
-// import Counter from '~/components/TheCounter.vue'
+import type { Company } from '~/composables/company'
 import AppLink from '~/components/AppLink.vue'
+import CompanyLogo from '~/components/CompanyLogo.vue'
+
+const companies: Company[] = [
+  { name: '万达信息股份有限公司', imgSrc: '/imgs/final/wonders.png' },
+  {
+    name: '大连东软思维科技发展有限公司上海分公司',
+    imgSrc: '/imgs/final/neusoft.png',
+  },
+  { name: '上海亨兹瑞信息科技有限公司', imgSrc: '/imgs/final/herdsric.png' },
+  { name: '博世华域转向系统有限公司', imgSrc: '/imgs/final/bosch.png' },
+  // 可以继续添加更多的公司对象
+]
 
 const { profile } = sourceData
 </script>
 
 <template>
-  <div text-left>
-    <div>
-      <h1 font-size-7>
+  <div class="profile" text-left>
+    <div class="my-name">
+      <h1 font-size-7 font-bold>
         {{ profile.name }}
       </h1>
     </div>
-    <div>
-      <p>Hi！你好，我是张辰海</p>
-      <p>职业是一名前端开发工程师</p>
-
-      <br>
-      <p>曾先后就职于：</p>
-      <ul>
-        <li>万达信息股份有限公司</li>
-        <li>大连东软思维科技发展有限公司上海分公司</li>
-        <li>上海亨兹瑞信息科技有限公司</li>
-        <li>博世华域转向系统有限公司</li>
-      </ul>
-
-      <br>
-
-      <div class="icon-neusoft" />
-      <img src="/imgs/final/wonders.png" alt="wonders">
-      <img src="/imgs/final/neusoft.png" alt="neusoft">
-      <img src="/imgs/final/herdsric.png" alt="herdsric">
-      <img src="/imgs/final/bosch.png" alt="bosch">
+    <div class="article">
+      <p>Hi！你好，我是张辰海,是一名前端开发工程师。曾就职于</p>
+      <div flex="~" flex-col>
+        <CompanyLogo
+          v-for="company in companies"
+          :key="company.name"
+          :ele="company"
+        />
+      </div>
 
       <p>
-        从事程序员和项目经理的工作。在上海虹桥塔台，复星，阿里巴巴，还有上汽的整车中都留下过我工作的痕迹。
-      </p>
-
-      <br>
-      <p>
-        我目前关注前端领域，熟悉原生和Vue框架，今后会不断探索Stable
-        Diffusion以及机器学习的相关技术和项目
+        作为一名前端开发者，我常用原生和Vue框架。今后想不断探索AI技术领域，现在兴趣在Stable
+        Diffusion和机器学习上。
       </p>
 
       <p>
-        我平时的兴趣是运动，看书和打游戏。同时我是NBA，任天堂的超级粉丝，如果你也这些方面的话题，我会非常高兴和你聊天。
+        我喜欢球类运动，看书和打游戏。但由于玻璃人属性，运动看多于亲自参与。我也是NBA，任天堂的超级粉丝，如果你也这些方面的话题，我会非常高兴和你聊天。
       </p>
-
-      <p>Find me on</p>
-      <p flex="~ gap-3 wrap" class="mt--2!">
-        <AppLink
-          i-carbon-logo-github
-          op75
-          icon-btn
-          to="https://github.com/superzdd"
-        >
-          Github
+    </div>
+    <div class="collection">
+      <p>代码仓库及博客</p>
+      <p flex="~ gap-3 wrap">
+        <AppLink to="https://github.com/superzdd">
+          <span i-simple-icons-github />&nbsp;GitHub
+        </AppLink>
+        <AppLink to="https://gitee.com/superzdd">
+          <span i-simple-icons-gitee />&nbsp;Gitee
+        </AppLink>
+        <AppLink to="https://www.jianshu.com/u/88883a723899">
+          <span class="jianshu" />&nbsp;简书
         </AppLink>
       </p>
-
-      <br>
     </div>
   </div>
 </template>
 
 <style>
-.icon-neusoft {
-  background-image: url('/favicon.svg');
-  width: 100px;
-  height: 100px;
+.profile {
+  line-height: 1.75;
+}
+
+.profile p {
+  margin: 1.5rem auto;
+}
+
+.profile a {
+  font-weight: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(125, 125, 125, 0.3);
+  transition: border 0.3s ease-in-out;
+
+  display: flex;
+  align-items: center;
+}
+
+.profile .collection {
+  margin-top: 2.5rem;
+}
+
+.jianshu {
+  --un-icon: url('/imgs/final/jianshu.svg');
+  -webkit-mask: var(--un-icon) no-repeat;
+  mask: var(--un-icon) no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  background-color: currentColor;
+  color: inherit;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.collection {
 }
 </style>

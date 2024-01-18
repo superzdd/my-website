@@ -5,7 +5,8 @@
     </button>
 
     <a
-      i-carbon-logo-github icon-btn
+      i-carbon-logo-github
+      icon-btn
       rel="noreferrer"
       href="https://github.com/superzdd"
       target="_blank"
