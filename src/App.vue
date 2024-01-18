@@ -5,7 +5,7 @@ import TheHeader from '~/components/TheHeader.vue'
 <template>
   <main h-screen flex flex-col font-sans text="center gray-700 dark:gray-200">
     <TheHeader flex p-5 />
-    <RouterView flex flex-grow flex-col p-5 />
+    <RouterView flex flex-grow flex-col self-center p-5 />
     <!-- <TheFooter flex p-5 /> -->
   </main>
 </template>

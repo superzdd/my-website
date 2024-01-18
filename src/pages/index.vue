@@ -26,7 +26,7 @@ const { profile } = sourceData
       </h1>
     </div>
     <div class="article">
-      <p>Hi！你好，我是张辰海,是一名前端开发工程师。曾就职于</p>
+      <p>Hi！你好，我是张辰海,是一名前端开发工程师。曾就职于：</p>
       <div flex="~" flex-col>
         <CompanyLogo
           v-for="company in companies"
@@ -36,12 +36,15 @@ const { profile } = sourceData
       </div>
 
       <p>
-        作为一名前端开发者，我常用原生和Vue框架。今后想不断探索AI技术领域，现在兴趣在Stable
+        作为一名前端开发者，我常用原生和<span
+
+          i-simple-icons-vuedotjs inline-block
+        />框架。今后想不断探索AI技术领域，现在兴趣在Stable
         Diffusion和机器学习上。
       </p>
 
       <p>
-        我喜欢球类运动，看书和打游戏。但由于玻璃人属性，运动看多于亲自参与。我也是NBA，任天堂的超级粉丝，如果你也这些方面的话题，我会非常高兴和你聊天。
+        我喜欢球类运动，看书和打游戏。但玻璃人体质使我看得多动得少。我也是NBA，任天堂的超级粉丝，如果你也这些方面的话题，我会非常高兴和你聊天。
       </p>
     </div>
     <div class="collection">
@@ -63,11 +66,12 @@ const { profile } = sourceData
 
 <style>
 .profile {
+  max-width: 1024px;
   line-height: 1.75;
 }
 
 .profile p {
-  margin: 1.5rem auto;
+  margin-top: 1.5rem;
 }
 
 .profile a {

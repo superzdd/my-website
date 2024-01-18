@@ -1,9 +1,13 @@
 import { Z_DEFLATED } from 'zlib';
+<script setup>
+import MyLogo from '~/components/MyLogo.vue'
+</script>
+
 <template>
   <div id="header" flex="~" flex-justify-between>
     <div class="container-left" h-12 w-12>
       <router-link to="/">
-        <img src="/imgs/final/zdd.svg" h-full w-full alt="zdd">
+        <MyLogo />
       </router-link>
     </div>
     <div class="container-right">
@@ -14,14 +18,3 @@ import { Z_DEFLATED } from 'zlib';
     </div>
   </div>
 </template>
-
-<style lang="css">
-/* #header {
-  height: 3rem;
-  width: 100vw;
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-} */
-</style>
