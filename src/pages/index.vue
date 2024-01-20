@@ -19,13 +19,13 @@ const { profile } = sourceData
 </script>
 
 <template>
-  <div class="profile" text-left>
+  <div class="profile" text-left op-0>
     <div class="my-name">
       <h1 font-size-7 font-bold>
         {{ profile.name }}
       </h1>
     </div>
-    <div class="article">
+    <div class="article" op-0>
       <p>Hi！你好，我是张辰海,是一名前端开发工程师。曾就职于：</p>
       <div flex="~" flex-col>
         <CompanyLogo
@@ -37,8 +37,8 @@ const { profile } = sourceData
 
       <p>
         作为一名前端开发者，我常用原生和<span
-
-          i-simple-icons-vuedotjs inline-block
+          i-simple-icons-vuedotjs
+          inline-block
         />框架。今后想不断探索AI技术领域，现在兴趣在Stable
         Diffusion和机器学习上。
       </p>
