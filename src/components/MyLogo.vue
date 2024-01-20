@@ -2,8 +2,8 @@
   <div class="page">
     <svg
       version="1.0"
-      width="50"
-      height="50"
+      width="48"
+      height="48"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"
       viewBox="0 0 100 100"

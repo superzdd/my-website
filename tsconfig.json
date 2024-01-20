@@ -22,5 +22,6 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
+  // "include": ["typings/*.d.ts"],
   "exclude": ["dist", "node_modules", "eslint.config.js"]
 }

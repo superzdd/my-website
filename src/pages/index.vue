@@ -3,6 +3,7 @@ import sourceData from '~/data.json'
 import type { Company } from '~/composables/company'
 import AppLink from '~/components/AppLink.vue'
 import CompanyLogo from '~/components/CompanyLogo.vue'
+import Background from '~/components/Background.vue'
 
 const companies: Company[] = [
   { name: '万达信息股份有限公司', imgSrc: '/imgs/final/wonders.png' },
@@ -19,13 +20,14 @@ const { profile } = sourceData
 </script>
 
 <template>
-  <div class="profile" text-left op-0>
-    <div class="my-name">
+  <div class="profile" mt-25 text-left>
+    <Background absolute z-0 op-8 />
+    <div class="my-name" z-1>
       <h1 font-size-7 font-bold>
         {{ profile.name }}
       </h1>
     </div>
-    <div class="article" op-0>
+    <div class="article" z-1>
       <p>Hi！你好，我是张辰海,是一名前端开发工程师。曾就职于：</p>
       <div flex="~" flex-col>
         <CompanyLogo
@@ -47,7 +49,7 @@ const { profile } = sourceData
         我喜欢球类运动，看书和打游戏。但玻璃人体质使我看得多动得少。我也是NBA，任天堂的超级粉丝，如果你也这些方面的话题，我会非常高兴和你聊天。
       </p>
     </div>
-    <div class="collection">
+    <div class="collection" z-1>
       <p>代码仓库及博客</p>
       <p flex="~ gap-3 wrap">
         <AppLink to="https://github.com/superzdd">
