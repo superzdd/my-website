@@ -55,13 +55,6 @@ export class RemTool {
       this.height = hWindow
     }
 
-    // console.log(
-    //   `rem get window size: ${JSON.stringify({
-    //     width: this.width,
-    //     height: this.height,
-    //   })}`
-    // );
-
     return {
       width: this.width,
       height: this.height,

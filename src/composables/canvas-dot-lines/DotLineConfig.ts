@@ -9,13 +9,15 @@ export class DotLineConfig {
   /**
    * 渲染间隔
    */
-  public static renderInterval = 1000 / 60
+  public static renderInterval = Math.round(1000 / 60)
   /**
    * 默认第一次总共点的数量
    */
   public static totalDots = 100
   /** 每个点的半径 */
   public static dotRadius = 2
+  /** 每个点的颜色 */
+  public static dotColor = `rgba(0,0,0,0.5)`
   /** 红点半径 */
   public static redDotRadius = 2
   /** 每个点的初始速度 */

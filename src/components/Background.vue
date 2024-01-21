@@ -36,11 +36,9 @@ function startRender() {
   const canvasInfo = DotLineConfig.canvasInfo
   if (now - DotLineConfig.lastRenderTime >= DotLineConfig.renderInterval) {
     DotLineConfig.lastRenderTime = now
-    canvasInfo.ctx.clearRect(0, 0, canvasInfo.width, canvasInfo.height)
-    CommonTool.rect(DotLineConfig.canvasInfo)
+    CommonTool.rect(canvasInfo)
 
-    for (const b of dots)
-      b.rendered = false
+    for (const b of dots) b.rendered = false
 
     for (let i = 0; i < dots.length; i++) {
       const dot = dots[i]
@@ -53,10 +51,6 @@ function startRender() {
         dot.render(dots)
       }
     }
-
-    // if (appView.mouseBall) {
-    //   appView.mouseBall.render(dots);
-    // }
   }
   requestAnimationFrame(startRender)
 }

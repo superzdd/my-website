@@ -21,14 +21,16 @@ const { profile } = sourceData
 
 <template>
   <div class="profile" mt-25 text-left>
-    <Background absolute z-0 op-8 />
+    <div pointer-events-none fixed left-0 top-0 z--1>
+      <Background />
+    </div>
     <div class="my-name" z-1>
       <h1 font-size-7 font-bold>
         {{ profile.name }}
       </h1>
     </div>
     <div class="article" z-1>
-      <p>Hi！你好，我是张辰海,是一名前端开发工程师。曾就职于：</p>
+      <p>Hi！我是张辰海，是一名前端开发工程师。曾就职于：</p>
       <div flex="~" flex-col>
         <CompanyLogo
           v-for="company in companies"

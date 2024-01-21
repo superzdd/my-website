@@ -19,12 +19,10 @@ export class CommonTool {
   }
 
   public static rect(canvasInfo: ICanvasInfo, x = 0, y = 0) {
-    // console.log("[rect] render");
-    // console.log("[rect] ctx is:");
-    // console.log(canvasInfo.ctx);
-    // console.log(`canvasInfo.ctx.fillStyle is ${canvasInfo.ctx.fillStyle}`);
-    canvasInfo.ctx.fillStyle = `rgba(0,0,0,1)`
-    canvasInfo.ctx.fillRect(x, y, canvasInfo.width, canvasInfo.height)
+    const { ctx } = canvasInfo
+    ctx.clearRect(0, 0, canvasInfo.width, canvasInfo.height)
+    ctx.fillStyle = `rgba(255,255,255,0.5)`
+    ctx.fillRect(x, y, canvasInfo.width, canvasInfo.height)
   }
 
   public static line(
@@ -33,7 +31,7 @@ export class CommonTool {
     p2: IPoint,
     lineWidth: number,
     alpha: number,
-    color = [255, 255, 255],
+    color = [0, 0, 0],
   ) {
     const { ctx } = canvasInfo
     ctx.lineWidth = lineWidth

@@ -6,61 +6,58 @@ import { DotLineConfig } from './DotLineConfig'
  */
 export class Dot {
   /**
-   * 点的ID
-   * 每个点都有一个ID，方便对象查找
+   * 点的ID,每个点都有一个ID，方便对象查找
    */
-  public id: string // this.id();
-  /**
-   * 初始圆心横坐标
-   */
-  public org_x = 0 //
+  public id: string
+
+  /** 初始圆心横坐标 */
+  public org_x = 0
+
   /** 初始圆心纵坐标 */
-  public org_y = 0 //
+  public org_y = 0
+
   /**
    * 初始圆心横坐标在整张画布中的相对百分比
    */
   private org_x_percent: number
+
   /**
    * 初始圆心纵坐标在整张画布中的相对百分比
    */
   private org_y_percent: number
+
   /** 半径 */
   private rad: number
 
-  /**
-   * 水平方向运动距离
-   */
+  /** 水平方向运动距离 */
   public d_x: number = 0
 
-  /**
-   * 垂直方向运动距离
-   */
+  /** 垂直方向运动距离 */
   public d_y: number = 0
-  /**
-   * // 水平方向运动速度
-   */
+
+  /** 水平方向运动速度 */
   public s_x: number
+
   /** 垂直方向运动速度 */
   public s_y: number
-  /**
-   * 点的颜色
-   */
+
+  /** 点的颜色 */
   private color: string
-  /**
-   * 声明周期 单位ms
-   */
+
+  /** 声明周期 单位ms */
   private life: number
+
   /** 出生时间，Date.now()的数字 */
   private born: number
+
   /**
    * 销毁标志位
    * false -> 不销毁， true -> 销毁
    * 默认是false不销毁
    */
-  public needDestory = false
-  /**
-   * 是否渲染完毕标志位
-   */
+  public needDestroy = false
+
+  /** 是否渲染完毕标志位 */
   private rendered = false
 
   /**
@@ -92,10 +89,10 @@ export class Dot {
     this.rad = rad // 半径
     this.s_x = s_x // 水平方向运动速度
     this.s_y = s_y // 垂直方向运动速度
-    this.color = CommonTool.color()
+    this.color = DotLineConfig.dotColor
     this.life = 10000
     this.born = Date.now()
-    this.needDestory = false
+    this.needDestroy = false
     this.rendered = false
   }
 
