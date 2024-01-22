@@ -21,7 +21,7 @@ export class DotLineConfig {
   /** 红点半径 */
   public static redDotRadius = 2
   /** 每个点的初始速度 */
-  public static dotSpeedBasic = 1
+  public static dotSpeedBasic = 2.5
   /** 两点之间连线阈值 */
   public static distanceThreshold = 100
   /** 全局唯一canvasInfo */
@@ -38,6 +38,9 @@ export class DotLineConfig {
       distanceToCenter: 0,
     }
 
+    DotLineConfig.dotColor = isDark
+      ? `rgba(255,255,255,0.5)`
+      : `rgba(0,0,0,0.5)`
     DotLineConfig.canvasInfo = canvasInfo
     return this.updateCanvas()
   }

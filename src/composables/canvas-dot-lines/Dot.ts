@@ -47,6 +47,12 @@ export class Dot {
   /** 声明周期 单位ms */
   private life: number
 
+  /** 是否无敌，无敌时，可以穿墙 */
+  private protected: boolean
+
+  /** 保护期，保护期间无敌 */
+  private protectTime: number
+
   /** 出生时间，Date.now()的数字 */
   private born: number
 
@@ -94,11 +100,16 @@ export class Dot {
     this.born = Date.now()
     this.needDestroy = false
     this.rendered = false
+    this.protectTime = 2000
+    this.protected = true
   }
 
-  public render(dotList: [Dot]) {
+  public render(dotList: [Dot], now = Date.now()) {
     this.d_x += this.s_x
     this.d_y += this.s_y
+
+    if (this.protected)
+      this.protected = !(now - this.born > this.protectTime)
 
     // 碰撞检测
     // 如果球触碰到了屏幕边缘，对应方向速度取反
@@ -108,11 +119,13 @@ export class Dot {
 
     const canvasInfo = DotLineConfig.canvasInfo
 
-    if (act_x - this.rad <= 0 || act_x + this.rad >= canvasInfo.width)
-      this.s_x *= -1
+    if (!this.protected) {
+      if (act_x - this.rad <= 0 || act_x + this.rad >= canvasInfo.width)
+        this.s_x *= -1
 
-    if (act_y - this.rad <= 0 || act_y + this.rad >= canvasInfo.height)
-      this.s_y *= -1
+      if (act_y - this.rad <= 0 || act_y + this.rad >= canvasInfo.height)
+        this.s_y *= -1
+    }
 
     const ctx = canvasInfo.ctx
     ctx.beginPath()
@@ -120,7 +133,7 @@ export class Dot {
     ctx.fillStyle = this.color
     ctx.fill()
 
-    if (dotList) {
+    if (!this.protected && dotList) {
       for (const p of dotList) {
         if (p.id === this.id || p.rendered)
           continue

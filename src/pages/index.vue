@@ -52,7 +52,9 @@ const { profile } = sourceData
       </p>
     </div>
     <div class="collection" z-1>
-      <p>代码仓库及博客</p>
+      <p class="sub-title">
+        代码仓库及博客
+      </p>
       <p flex="~ gap-3 wrap">
         <AppLink to="https://github.com/superzdd">
           <span i-simple-icons-github />&nbsp;GitHub
@@ -63,6 +65,16 @@ const { profile } = sourceData
         <AppLink to="https://www.jianshu.com/u/88883a723899">
           <span class="jianshu" />&nbsp;简书
         </AppLink>
+      </p>
+    </div>
+
+    <div class="contact" z-1>
+      <p class="sub-title">
+        联系方式
+      </p>
+      <p flex="~ gap-3" flex-col>
+        <span>请扫描下方二维码</span>
+        <img h-48 w-48 src="/imgs/final/qrcode-logo-256.png" alt="qrcode">
       </p>
     </div>
   </div>
@@ -81,15 +93,19 @@ const { profile } = sourceData
 .profile a {
   font-weight: inherit;
   text-decoration: none;
-  border-bottom: 1px solid rgba(125, 125, 125, 0.3);
   transition: border 0.3s ease-in-out;
 
   display: flex;
   align-items: center;
 }
 
-.profile .collection {
+.profile .collection,
+.profile .contact {
   margin-top: 2.5rem;
+}
+
+.sub-title {
+  border-bottom: 1px solid rgba(125, 125, 125, 0.3);
 }
 
 .jianshu {
@@ -102,8 +118,5 @@ const { profile } = sourceData
   color: inherit;
   width: 1.2em;
   height: 1.2em;
-}
-
-.collection {
 }
 </style>

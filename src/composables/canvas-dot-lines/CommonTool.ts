@@ -1,3 +1,4 @@
+import { DotLineConfig } from './DotLineConfig'
 import type { ICanvasInfo, IPoint } from './Interface'
 
 export class CommonTool {
@@ -30,12 +31,10 @@ export class CommonTool {
     p1: IPoint,
     p2: IPoint,
     lineWidth: number,
-    alpha: number,
-    color = [0, 0, 0],
   ) {
     const { ctx } = canvasInfo
     ctx.lineWidth = lineWidth
-    ctx.strokeStyle = `rgba(${color[0]},${color[1]},${color[2]},${alpha})`
+    ctx.strokeStyle = DotLineConfig.dotColor
     ctx.beginPath()
     ctx.moveTo(p1.x, p1.y)
     ctx.lineTo(p2.x, p2.y)

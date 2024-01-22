@@ -38,6 +38,9 @@ function startRender() {
     DotLineConfig.lastRenderTime = now
     CommonTool.rect(canvasInfo)
 
+    if (dots.length < 30 && Math.random() < 0.2)
+      createNewDot()
+
     for (const b of dots) b.rendered = false
 
     for (let i = 0; i < dots.length; i++) {
@@ -48,58 +51,88 @@ function startRender() {
         continue
       }
       else {
-        dot.render(dots)
+        dot.render(dots, now)
       }
     }
   }
   requestAnimationFrame(startRender)
 }
 
-function createNewDot(e) {
-  const { clientX: x, clientY: y } = e
-  let s_x
-    = DotLineConfig.dotSpeedBasic
-    - Math.random() * DotLineConfig.dotSpeedBasic * 2
-  if (s_x <= 1 && s_x >= -1)
-    s_x = s_x > 0 ? 1 : -1
+function createNewDot() {
+  // const { clientX: x, clientY: y } = e;
+  // let s_x =
+  //   DotLineConfig.dotSpeedBasic -
+  //   Math.random() * DotLineConfig.dotSpeedBasic * 2;
+  // if (s_x <= 1 && s_x >= -1) s_x = s_x > 0 ? 1 : -1;
 
-  let s_y
-    = DotLineConfig.dotSpeedBasic
-    - Math.random() * DotLineConfig.dotSpeedBasic * 2
-  if (s_y <= 1 && s_y >= -1)
-    s_y = s_y > 0 ? 1 : -1
+  // let s_x = Math.random() * DotLineConfig.dotSpeedBasic;
+  // let s_y =
+  //   (Math.random() * DotLineConfig.dotSpeedBasic * 2 -
+  //     DotLineConfig.dotSpeedBasic) *
+  //   0.3;
+
+  // let s_y =
+  //   DotLineConfig.dotSpeedBasic -
+  //   Math.random() * DotLineConfig.dotSpeedBasic * 2;
+  // if (s_y <= 1 && s_y >= -1) s_y = s_y > 0 ? 1 : -1;
+
+  const { x, y, s_x, s_y } = initRandomBorn()
 
   const d = new Dot(x, y, DotLineConfig.dotRadius, s_x, s_y)
   dots.push(d)
   return d
 }
 
-function initBackground() {
-  resizeCanvas(dotLineConfig.initCanvas(app.value))
+/** 定义点的出生位置以及初始速度 */
+function initRandomBorn() {
+  // 为了让点不显得特别乱，点需要从屏幕边缘弹射出来，并且是慢慢地，随机地飞出来
+  const canvasInfo = DotLineConfig.canvasInfo
+  const bornXs = [0, canvasInfo.width / 2, canvasInfo.width]
+  const bornYs = [0, canvasInfo.height / 2, canvasInfo.height]
 
-  const { dotRadius, totalDots, canvasInfo } = DotLineConfig
-  const dotDiameter = dotRadius * 2
-  for (let i = 0; i < totalDots; i++) {
-    let clientX = ((Math.random() * 100 + 1) / 100) * canvasInfo.width
+  const rdmXSeed = Math.floor(Math.random() * 3)
+  const rdmYSeed = Math.floor(Math.random() * 3)
 
-    if (clientX < dotDiameter)
-      clientX = dotDiameter
-    else if (clientX > canvasInfo.width - dotDiameter)
-      clientX = canvasInfo.width - dotDiameter
+  const x = bornXs[rdmXSeed]
+  const y = bornYs[rdmYSeed]
 
-    let clientY = Math.random() * canvasInfo.height
+  let s_x = Math.random() * DotLineConfig.dotSpeedBasic
+  let s_y = Math.random() * DotLineConfig.dotSpeedBasic
 
-    if (clientY < dotDiameter)
-      clientY = dotDiameter
-    else if (clientY > canvasInfo.height - dotDiameter)
-      clientY = canvasInfo.height - dotDiameter
-
-    createNewDot({
-      clientX,
-      clientY,
-    })
+  switch (rdmXSeed) {
+    case 1:
+      s_x *= 0.3
+      break
+    case 2:
+      s_x *= -1
+      break
+    case 0:
+    default:
+      break
   }
 
+  switch (rdmYSeed) {
+    case 1:
+      s_y *= 0.3
+      break
+    case 2:
+      s_y *= -1
+      break
+    case 0:
+    default:
+      break
+  }
+
+  return {
+    x,
+    y,
+    s_x,
+    s_y,
+  }
+}
+
+function initBackground() {
+  resizeCanvas(dotLineConfig.initCanvas(app.value))
   startRender()
 }
 
