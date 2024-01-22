@@ -11,9 +11,9 @@ import MyLogo from '~/components/MyLogo.vue'
       </router-link>
     </div>
     <div class="container-right" flex="~" flex-items-center>
-      <router-link to="/personal/collection">
+      <!-- <router-link to="/personal/collection">
         作品集
-      </router-link>
+      </router-link> -->
     </div>
   </div>
 </template>

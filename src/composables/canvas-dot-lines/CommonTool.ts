@@ -22,7 +22,7 @@ export class CommonTool {
   public static rect(canvasInfo: ICanvasInfo, x = 0, y = 0) {
     const { ctx } = canvasInfo
     ctx.clearRect(0, 0, canvasInfo.width, canvasInfo.height)
-    ctx.fillStyle = `rgba(255,255,255,0.5)`
+    ctx.fillStyle = isDark.value ? `rgba(255,255,255,0)` : `rgba(0,0,0,0)`
     ctx.fillRect(x, y, canvasInfo.width, canvasInfo.height)
   }
 

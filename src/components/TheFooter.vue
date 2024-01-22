@@ -1,6 +1,16 @@
+<script setup>
+import { DotLineConfig } from '~/composables/canvas-dot-lines/DotLineConfig'
+
+function darkChange() {
+  toggleDark()
+  // console.log(isDark.value)
+  DotLineConfig.refreshDotColor()
+}
+</script>
+
 <template>
   <nav mt-6 inline-flex gap-2 text-xl>
-    <button icon-btn @click="toggleDark()">
+    <button icon-btn @click="darkChange">
       <div i-carbon-sun dark:i-carbon-moon />
     </button>
 

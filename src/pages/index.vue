@@ -65,6 +65,10 @@ const { profile } = sourceData
         <AppLink to="https://www.jianshu.com/u/88883a723899">
           <span class="jianshu" />&nbsp;简书
         </AppLink>
+        <AppLink to="https://www.kaggle.com/superzdd">
+          <span i-simple-icons-kaggle />&nbsp;Kaggle
+        </AppLink>
+        <!-- https://www.kaggle.com/superzdd -->
       </p>
     </div>
 

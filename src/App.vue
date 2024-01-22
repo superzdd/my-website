@@ -3,7 +3,14 @@ import TheHeader from '~/components/TheHeader.vue'
 </script>
 
 <template>
-  <main h-screen flex flex-col font-sans text="center gray-700 dark:gray-200">
+  <main
+    h-screen
+    flex
+    flex-col
+    font-sans
+    text="center gray-700 dark:gray-200"
+    style="background-color: rgba(0, 0, 0, 0)"
+  >
     <TheHeader absolute z-99 w-screen flex p-5 />
     <RouterView flex flex-grow flex-col self-center p-5 />
     <TheFooter flex p-5 />

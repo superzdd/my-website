@@ -15,17 +15,25 @@ export class DotLineConfig {
    */
   public static totalDots = 100
   /** 每个点的半径 */
-  public static dotRadius = 2
+  public static dotRadius = 2 * window.devicePixelRatio
   /** 每个点的颜色 */
   public static dotColor = `rgba(0,0,0,0.5)`
   /** 红点半径 */
-  public static redDotRadius = 2
+  public static redDotRadius = 4
   /** 每个点的初始速度 */
   public static dotSpeedBasic = 2.5
   /** 两点之间连线阈值 */
-  public static distanceThreshold = 100
+  public static distanceThreshold = 200
   /** 全局唯一canvasInfo */
   public static canvasInfo: ICanvasInfo
+
+  public static refreshDotColor() {
+    let dark = false
+    if (isDark !== null && isDark !== undefined)
+      dark = isDark.value
+
+    DotLineConfig.dotColor = dark ? `rgba(100,100,100,0.5)` : `rgba(0,0,0,0.5)`
+  }
 
   public initCanvas(canvas: HTMLCanvasElement) {
     const canvasInfo: ICanvasInfo = {
@@ -38,9 +46,7 @@ export class DotLineConfig {
       distanceToCenter: 0,
     }
 
-    DotLineConfig.dotColor = isDark
-      ? `rgba(255,255,255,0.5)`
-      : `rgba(0,0,0,0.5)`
+    DotLineConfig.refreshDotColor()
     DotLineConfig.canvasInfo = canvasInfo
     return this.updateCanvas()
   }

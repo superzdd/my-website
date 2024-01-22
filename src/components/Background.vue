@@ -59,25 +59,7 @@ function startRender() {
 }
 
 function createNewDot() {
-  // const { clientX: x, clientY: y } = e;
-  // let s_x =
-  //   DotLineConfig.dotSpeedBasic -
-  //   Math.random() * DotLineConfig.dotSpeedBasic * 2;
-  // if (s_x <= 1 && s_x >= -1) s_x = s_x > 0 ? 1 : -1;
-
-  // let s_x = Math.random() * DotLineConfig.dotSpeedBasic;
-  // let s_y =
-  //   (Math.random() * DotLineConfig.dotSpeedBasic * 2 -
-  //     DotLineConfig.dotSpeedBasic) *
-  //   0.3;
-
-  // let s_y =
-  //   DotLineConfig.dotSpeedBasic -
-  //   Math.random() * DotLineConfig.dotSpeedBasic * 2;
-  // if (s_y <= 1 && s_y >= -1) s_y = s_y > 0 ? 1 : -1;
-
   const { x, y, s_x, s_y } = initRandomBorn()
-
   const d = new Dot(x, y, DotLineConfig.dotRadius, s_x, s_y)
   dots.push(d)
   return d
@@ -90,14 +72,21 @@ function initRandomBorn() {
   const bornXs = [0, canvasInfo.width / 2, canvasInfo.width]
   const bornYs = [0, canvasInfo.height / 2, canvasInfo.height]
 
-  const rdmXSeed = Math.floor(Math.random() * 3)
-  const rdmYSeed = Math.floor(Math.random() * 3)
+  let rdmXSeed = Math.floor(Math.random() * 3)
+  let rdmYSeed = Math.floor(Math.random() * 3)
+
+  if (rdmXSeed === 1 && rdmYSeed === 1) {
+    if (Math.random() < 0.5)
+      rdmXSeed = Math.round(Math.random()) * 2
+    else
+      rdmYSeed = Math.round(Math.random()) * 2
+  }
 
   const x = bornXs[rdmXSeed]
   const y = bornYs[rdmYSeed]
 
-  let s_x = Math.random() * DotLineConfig.dotSpeedBasic
-  let s_y = Math.random() * DotLineConfig.dotSpeedBasic
+  let s_x = 1 + Math.random() * DotLineConfig.dotSpeedBasic
+  let s_y = 1 + Math.random() * DotLineConfig.dotSpeedBasic
 
   switch (rdmXSeed) {
     case 1:

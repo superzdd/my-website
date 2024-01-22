@@ -130,7 +130,8 @@ export class Dot {
     const ctx = canvasInfo.ctx
     ctx.beginPath()
     ctx.arc(act_x, act_y, this.rad, 0, 2 * Math.PI, true)
-    ctx.fillStyle = this.color
+    // ctx.fillStyle = this.color
+    ctx.fillStyle = DotLineConfig.dotColor
     ctx.fill()
 
     if (!this.protected && dotList) {
@@ -156,8 +157,7 @@ export class Dot {
             canvasInfo,
             p1,
             p2,
-            (1 - disPercent) * 2,
-            1 - disPercent,
+            Math.max((1 - disPercent) * 2, 0.2),
           )
         }
       }
