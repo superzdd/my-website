@@ -6,13 +6,13 @@ import CompanyLogo from '~/components/CompanyLogo.vue'
 import Background from '~/components/Background.vue'
 
 const companies: Company[] = [
-  { name: '万达信息股份有限公司', imgSrc: '/imgs/final/wonders.png' },
+  { name: '万达信息股份有限公司', imgSrc: '/imgs/wonders.png' },
   {
     name: '大连东软思维科技发展有限公司上海分公司',
-    imgSrc: '/imgs/final/neusoft.png',
+    imgSrc: '/imgs/neusoft.png',
   },
-  { name: '上海亨兹瑞信息科技有限公司', imgSrc: '/imgs/final/herdsric.png' },
-  { name: '博世华域转向系统有限公司', imgSrc: '/imgs/final/bosch.png' },
+  { name: '上海亨兹瑞信息科技有限公司', imgSrc: '/imgs/herdsric.png' },
+  { name: '博世华域转向系统有限公司', imgSrc: '/imgs/bosch.png' },
   // 可以继续添加更多的公司对象
 ]
 
@@ -21,7 +21,7 @@ const { profile } = sourceData
 
 <template>
   <div class="profile" mt-25 text-left>
-    <div pointer-events-none fixed left-0 top-0 z--1>
+    <div class="bg-container" pointer-events-none fixed left-0 top-0 z--1>
       <Background />
     </div>
     <div class="my-name" z-1>
@@ -78,7 +78,7 @@ const { profile } = sourceData
       </p>
       <p flex="~ gap-3" flex-col>
         <span>请扫描下方二维码</span>
-        <img h-48 w-48 src="/imgs/final/qrcode-logo-256.png" alt="qrcode">
+        <img h-48 w-48 src="/imgs/qrcode-logo-256.png" alt="qrcode">
       </p>
     </div>
   </div>
@@ -108,12 +108,17 @@ const { profile } = sourceData
   margin-top: 2.5rem;
 }
 
+.bg-container {
+  mask-image: radial-gradient(circle, transparent, black);
+  --webkit-mask-image: radial-gradient(circle, transparent, black);
+}
+
 .sub-title {
   border-bottom: 1px solid rgba(125, 125, 125, 0.3);
 }
 
 .jianshu {
-  --un-icon: url('/imgs/final/jianshu.svg');
+  --un-icon: url('/imgs/jianshu.svg');
   -webkit-mask: var(--un-icon) no-repeat;
   mask: var(--un-icon) no-repeat;
   -webkit-mask-size: 100% 100%;
