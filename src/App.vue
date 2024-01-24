@@ -12,7 +12,8 @@ import TheHeader from '~/components/TheHeader.vue'
     style="background-color: rgba(0, 0, 0, 0)"
   >
     <TheHeader absolute z-99 w-screen flex p-5 />
-    <RouterView flex flex-grow flex-col self-center p-5 />
+    <!-- <RouterView flex flex-grow flex-col self-center p-5 /> -->
+    <RouterView />
     <TheFooter flex p-5 />
   </main>
 </template>
@@ -27,6 +28,9 @@ import TheHeader from '~/components/TheHeader.vue'
 .main-content {
   flex: 1;
   display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 1.25rem;
 }
 
 /* Media queries for responsive design */

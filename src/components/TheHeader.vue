@@ -10,10 +10,10 @@ import MyLogo from '~/components/MyLogo.vue'
         <MyLogo />
       </router-link>
     </div>
-    <div class="container-right" flex="~" flex-items-center>
-      <!-- <router-link to="/personal/collection">
-        作品集
-      </router-link> -->
+    <div class="container-right" flex="~" flex-items-center font-size-5>
+      <router-link to="/personal/mineSweeper">
+        <span i-carbon-game-console>game</span>
+      </router-link>
     </div>
   </div>
 </template>

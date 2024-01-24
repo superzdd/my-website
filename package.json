@@ -15,11 +15,14 @@
   "dependencies": {
     "@vueuse/core": "^10.7.0",
     "vue": "^3.3.10",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue3-touch-events": "^4.1.8",
+    "vue3-touch-hammer": "^0.0.8"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.4.0",
     "@iconify-json/carbon": "^1.1.24",
+    "@iconify-json/mdi": "^1.1.64",
     "@iconify-json/simple-icons": "^1.1.88",
     "@types/node": "^20.10.4",
     "@unocss/eslint-config": "^0.58.0",

@@ -43,6 +43,7 @@ declare module 'vue-router/auto/routes' {
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/hi/[name]': RouteRecordInfo<'/hi/[name]', '/hi/:name', { name: ParamValue<true> }, { name: ParamValue<false> }>,
     '/personal/collection': RouteRecordInfo<'/personal/collection', '/personal/collection', Record<never, never>, Record<never, never>>,
+    '/personal/mineSweeper': RouteRecordInfo<'/personal/mineSweeper', '/personal/mineSweeper', Record<never, never>, Record<never, never>>,
     '/personal/profile': RouteRecordInfo<'/personal/profile', '/personal/profile', Record<never, never>, Record<never, never>>,
     '/personal/projects': RouteRecordInfo<'/personal/projects', '/personal/projects', Record<never, never>, Record<never, never>>,
     '/personal/workExperience': RouteRecordInfo<'/personal/workExperience', '/personal/workExperience', Record<never, never>, Record<never, never>>,
