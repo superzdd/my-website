@@ -20,8 +20,9 @@ const GM = reactive(
 )
 
 const flaggedCount = computed(() => {
+  const totalMines = GM.current_diff_config.mineCount
   const blocks = GM.blocks.flat() as BlockState[]
-  return blocks.filter(e => e.flagged).length
+  return totalMines - blocks.filter(e => e.flagged).length
 })
 
 const numberColors = [
@@ -65,6 +66,26 @@ function getResetClass() {
       resetClass = 'bg-white-600/40 hover:bg-white/50'
       break
   }
+
+  return resetClass
+}
+
+function getToggleDigClass() {
+  let resetClass = ''
+
+  if (digNow.value)
+    resetClass = 'bg-green-600/40 hover:bg-green/50'
+  else resetClass = 'bg-gray-600/40 hover:bg-gray/50'
+
+  return resetClass
+}
+
+function getToggleFlagClass() {
+  let resetClass = ''
+
+  if (!digNow.value)
+    resetClass = 'bg-green-600/40 hover:bg-green/50'
+  else resetClass = 'bg-gray-600/40 hover:bg-gray/50'
 
   return resetClass
 }
@@ -116,8 +137,7 @@ function onTap(block: BlockState) {
     // console.log(`[onTap], digNow: ${digNow.value}`)
     if (digNow.value)
       GM.revealBlock(block)
-    else
-      GM.flag(block)
+    else GM.flag(block)
   }
 }
 
@@ -158,119 +178,147 @@ watchEffect(() => {
 
 <template>
   <div class="game-container" flex="~" flex-col items-center justify-center>
-    <div flex="~" w-80 items-center justify-left font-size-5>
-      <!-- 选择难度 -->
-      <select
-        id="selDifficult"
-        v-model="selectedDifficulty"
-        name="sel"
-        h-8
-        w-30
-        border-rd
-        border="1 gray-500/20"
-      >
-        <option v-for="x in Object.keys(dictChnDifficulty)" :key="x" :value="x">
-          {{
-            `地雷: ${
-              currentEnv.isMobile
-                ? GM.CONFIG_MOBILE_DIFFICULTY_LEVELS[x].mineCount
-                : GM.CONFIG_DIFFICULTY_LEVELS[x].mineCount
-            }`
-          }}
-        </option>
-      </select>
-      <button
-        class="reset-btn"
-        :class="getResetClass()"
+    <!-- 标题 -->
+    <h1 p-2 font-size-5 font-bold>
+      来玩扫雷吧~
+    </h1>
+    <div
+      class="info-container"
+      flex="~"
+      items-center
+      justify-between
+      font-size-4
+    >
+      <div class="info-left" flex="~" w-35 items-center justify-left>
+        <!-- 选择难度 -->
+        <!-- <span>难度：</span> -->
+        <div>
+          <select
+            id="selDifficult"
+            v-model="selectedDifficulty"
+            name="sel"
+            h-8
+            w-26
+            border-rd
+            border="1 gray-500/20"
+          >
+            <option
+              v-for="x in Object.keys(dictChnDifficulty)"
+              :key="x"
+              :value="x"
+            >
+              {{
+                `地雷: ${
+                  currentEnv.isMobile
+                    ? GM.CONFIG_MOBILE_DIFFICULTY_LEVELS[x].mineCount
+                    : GM.CONFIG_DIFFICULTY_LEVELS[x].mineCount
+                }`
+              }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div
+        class="info-center"
         flex="~"
-        ml
-        h-8
-        w-16
-        items-center
-        justify-center
-        border-b-3
-        border-r-3
-        border-rd
-        shadow-sm
-        @click="onResetClick()"
+
+        w-10 flex-grow-1 items-center justify-center border-l border-r border-gray-50
       >
-        <template v-if="GM.gameState === GameState.WIN">
-          <span i-carbon-face-wink />
-        </template>
-        <template
-          v-else-if="
-            GM.gameState === GameState.LOSE || GM.gameState === GameState.CHEAT
-          "
+        <button
+          class="reset-btn"
+          :class="getResetClass()"
+          flex="~"
+          h-10
+          w-10
+          items-center
+          justify-center
+          border-b-2
+          border-r-2
+          border-rd
+          shadow-sm
+          @click="onResetClick()"
         >
-          <span i-carbon-face-dizzy />
-        </template>
-        <template v-else>
-          <span i-carbon-reset />
-        </template>
-      </button>
+          <template v-if="GM.gameState === GameState.WIN">
+            <span i-carbon-face-wink />
+          </template>
+          <template
+            v-else-if="
+              GM.gameState === GameState.LOSE
+                || GM.gameState === GameState.CHEAT
+            "
+          >
+            <span i-carbon-face-dizzy />
+          </template>
+          <template v-else>
+            <span i-carbon-face-satisfied />
+          </template>
+        </button>
+      </div>
+      <div class="info-right" w-35>
+        <div flex="~" items-center justify-right>
+          <!-- 手机端切换按钮 -->
+          <button
+            flex="~"
+            ml
+            h-8
+            w-8
+            items-center
+            justify-center
+            border-b-3
+            border-r-3
+            border-rd
+            shadow-sm
+            :class="getToggleDigClass()"
+            @click="onDigClick()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="16"
+              viewBox="0 0 576 512"
+            >
+              <path
+                fill="currentColor"
+                d="M208 64a48 48 0 1 1 96 0a48 48 0 1 1-96 0M9.8 214.8c5.1-12.2 19.1-18 31.4-12.9l19.5 8.1l22.9-38.1C99.9 144.6 129.3 128 161 128c51.4 0 97 32.9 113.3 81.7l34.6 103.7l79.3 33.1l34.2-45.6c6.4-8.5 16.6-13.3 27.2-12.8s20.3 6.4 25.8 15.5l96 160c5.9 9.9 6.1 22.2.4 32.2S555.5 512 544 512H288c-11.1 0-21.4-5.7-27.2-15.2s-6.4-21.2-1.4-31.1l16-32c5.4-10.8 16.5-17.7 28.6-17.7h32l22.5-30L22.8 246.2c-12.2-5.1-18-19.1-12.9-31.4zm82.8 91.8l112 48c11.8 5 19.4 16.6 19.4 29.4v96c0 17.7-14.3 32-32 32s-32-14.3-32-32v-74.9l-60.6-26l-37 111c-5.6 16.8-23.7 25.8-40.5 20.2s-25.8-23.7-20.3-40.4l48-144l11-33z"
+              />
+            </svg>
+          </button>
+
+          <button
+            flex="~"
+            ml-1
+            h-8
+            w-8
+            items-center
+            justify-center
+            border-b-3
+            border-r-3
+            border-rd
+            shadow-sm
+            :class="getToggleFlagClass()"
+            @click="onDigClick()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="16"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v448c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- 游戏配置按钮区 -->
-    <div flex="~" w-80 items-center justify-left>
-      <div :style="{ opacity: GM.gameState !== 3 ? 1 : 0 }" m-5 flex="~">
-        <span i-mdi-mine inline-block h-5 w-5 />
-        <span>: {{ flaggedCount }}</span>
-      </div>
-
-      <!-- 手机端切换按钮 -->
-      <button
-        flex="~"
-        ml
-        h-8
-        w-16
-        items-center
-        justify-center
-        border-b-3
-        border-r-3
-        border-rd
-        shadow-sm
-        @click="onDigClick()"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="27"
-          height="24"
-          viewBox="0 0 576 512"
-          :color="digNow ? 'red' : 'black'"
-        >
-          <path
-            fill="currentColor"
-            d="M208 64a48 48 0 1 1 96 0a48 48 0 1 1-96 0M9.8 214.8c5.1-12.2 19.1-18 31.4-12.9l19.5 8.1l22.9-38.1C99.9 144.6 129.3 128 161 128c51.4 0 97 32.9 113.3 81.7l34.6 103.7l79.3 33.1l34.2-45.6c6.4-8.5 16.6-13.3 27.2-12.8s20.3 6.4 25.8 15.5l96 160c5.9 9.9 6.1 22.2.4 32.2S555.5 512 544 512H288c-11.1 0-21.4-5.7-27.2-15.2s-6.4-21.2-1.4-31.1l16-32c5.4-10.8 16.5-17.7 28.6-17.7h32l22.5-30L22.8 246.2c-12.2-5.1-18-19.1-12.9-31.4zm82.8 91.8l112 48c11.8 5 19.4 16.6 19.4 29.4v96c0 17.7-14.3 32-32 32s-32-14.3-32-32v-74.9l-60.6-26l-37 111c-5.6 16.8-23.7 25.8-40.5 20.2s-25.8-23.7-20.3-40.4l48-144l11-33z"
-          />
-        </svg>
-      </button>
-
-      <button
-        flex="~"
-        ml
-        h-8
-        w-16
-        items-center
-        justify-center
-        border-b-3
-        border-r-3
-        border-rd
-        shadow-sm
-        @click="onDigClick()"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="21"
-          height="24"
-          viewBox="0 0 448 512"
-          :color="digNow ? 'black' : 'red'"
-        >
-          <path
-            fill="currentColor"
-            d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v448c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48z"
-          />
-        </svg>
-      </button>
+    <div flex="~" mt-1 items-center justify-center>
+      <span>剩余</span>
+      <span i-mdi-mine inline-block h-5 w-5 />
+      <span ml-2>{{ flaggedCount }}</span>
     </div>
     <div p5>
       <div
@@ -293,12 +341,12 @@ watchEffect(() => {
           flex="~"
           h-7
           w-7
-          @click="onClick(block)"
           items-center
-          @contextmenu.prevent="onRightClick(block)"
           justify-center
-          @dblclick="onDBLClick(block)"
           border="1 gray-500/20"
+          @click="onClick(block)"
+          @contextmenu.prevent="onRightClick(block)"
+          @dblclick="onDBLClick(block)"
         >
           <template v-if="block.flagged">
             <div
@@ -362,52 +410,62 @@ watchEffect(() => {
         </button>
       </div>
     </div>
-    <div flex="~" items-left w-80 flex-col justify-left>
+    <div class="desc-container" flex="~" items-left flex-col justify-left>
       <div flex="~" items-left flex-col text-left font-size-4>
-        <h1 p1 font-size-5>
-          来局扫雷~
+        <h1 p1 font-size-5 font-italic>
+          操作说明：
         </h1>
         <template v-if="!currentEnv.isMobile">
           <h2 p1>
-            <span i-mdi-mouse-left-click-outline />&nbsp;翻开格子,<span
-              i-mdi-mouse-right-click-outline
-            />&nbsp;标记地雷
+            <span i-mdi-mouse-left-click-outline w-20 />&nbsp;翻开格子,
           </h2>
-          <h2 p1 flex="~">
-            <span i-mdi-mouse-left-click-outline /><span i-mdi-mouse-left-click-outline />&nbsp;翻开一圈
+          <h2 p1>
+            <span i-mdi-mouse-right-click-outline w-20 />&nbsp;标记地雷
+          </h2>
+          <h2 p1>
+            <span i-mdi-mouse-left-click-outline /><span
+              i-mdi-mouse-left-click-outline
+            />&nbsp;翻开一圈
           </h2>
         </template>
         <template v-else>
           <h2 p1 flex="~">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="23.5"
-              height="20"
-              viewBox="0 0 576 512"
-            >
-              <path
-                fill="currentColor"
-                d="M208 64a48 48 0 1 1 96 0a48 48 0 1 1-96 0M9.8 214.8c5.1-12.2 19.1-18 31.4-12.9l19.5 8.1l22.9-38.1C99.9 144.6 129.3 128 161 128c51.4 0 97 32.9 113.3 81.7l34.6 103.7l79.3 33.1l34.2-45.6c6.4-8.5 16.6-13.3 27.2-12.8s20.3 6.4 25.8 15.5l96 160c5.9 9.9 6.1 22.2.4 32.2S555.5 512 544 512H288c-11.1 0-21.4-5.7-27.2-15.2s-6.4-21.2-1.4-31.1l16-32c5.4-10.8 16.5-17.7 28.6-17.7h32l22.5-30L22.8 246.2c-12.2-5.1-18-19.1-12.9-31.4zm82.8 91.8l112 48c11.8 5 19.4 16.6 19.4 29.4v96c0 17.7-14.3 32-32 32s-32-14.3-32-32v-74.9l-60.6-26l-37 111c-5.6 16.8-23.7 25.8-40.5 20.2s-25.8-23.7-20.3-40.4l48-144l11-33z"
-              />
-            </svg>
-            &nbsp;翻开格子
+            <div flex="~" w-12 items-center justify-center>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23.5"
+                height="20"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M208 64a48 48 0 1 1 96 0a48 48 0 1 1-96 0M9.8 214.8c5.1-12.2 19.1-18 31.4-12.9l19.5 8.1l22.9-38.1C99.9 144.6 129.3 128 161 128c51.4 0 97 32.9 113.3 81.7l34.6 103.7l79.3 33.1l34.2-45.6c6.4-8.5 16.6-13.3 27.2-12.8s20.3 6.4 25.8 15.5l96 160c5.9 9.9 6.1 22.2.4 32.2S555.5 512 544 512H288c-11.1 0-21.4-5.7-27.2-15.2s-6.4-21.2-1.4-31.1l16-32c5.4-10.8 16.5-17.7 28.6-17.7h32l22.5-30L22.8 246.2c-12.2-5.1-18-19.1-12.9-31.4zm82.8 91.8l112 48c11.8 5 19.4 16.6 19.4 29.4v96c0 17.7-14.3 32-32 32s-32-14.3-32-32v-74.9l-60.6-26l-37 111c-5.6 16.8-23.7 25.8-40.5 20.2s-25.8-23.7-20.3-40.4l48-144l11-33z"
+                />
+              </svg>
+            </div>
+            <span flex-grow-1>翻开格子</span>
           </h2>
           <h2 p1 flex="~">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="17.5"
-              height="20"
-              viewBox="0 0 448 512"
-            >
-              <path
-                fill="currentColor"
-                d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v448c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48z"
-              />
-            </svg>
-            标记地雷
+            <div flex="~" w-12 items-center justify-center>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17.5"
+                height="20"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v448c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48z"
+                />
+              </svg>
+            </div>
+            <span flex-grow-1>标记地雷</span>
           </h2>
           <h2 p1 flex="~">
-            <span i-mdi-gesture-tap-hold />&nbsp;翻开一圈
+            <div flex="~" w-12 items-center justify-center>
+              <span i-mdi-gesture-tap-hold font-size-5 />
+            </div>
+            <span flex-grow-1>翻开周围</span>
           </h2>
         </template>
       </div>
@@ -418,6 +476,12 @@ watchEffect(() => {
 <style>
 .game-container {
   margin-top: 7rem;
+}
+
+.info-container,
+.desc-container {
+  width: 100%;
+  padding: 0 1.25rem;
 }
 
 span {
