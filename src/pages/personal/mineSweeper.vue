@@ -208,14 +208,19 @@ watchEffect(() => {
     <div
       class="info-container b-coolgray/40"
       flex="~"
-
-      items-center justify-between b-b p-2 font-size-4
+      items-center
+      justify-between
+      b-b
+      p-2
+      font-size-4
     >
       <div
         class="info-left"
         flex="~"
-
-        w-35 flex-grow-1 items-center justify-right
+        w-35
+        flex-grow-1
+        items-center
+        justify-right
       >
         <!-- 选择难度 -->
         <!-- <span>难度：</span> -->
@@ -245,30 +250,23 @@ watchEffect(() => {
           </select>
         </div>
       </div>
-      <div class="info-center" flex="~" w-16 items-center justify-center>
+      <div class="info-center" flex="~" w-20 items-center justify-center>
         <button
+          v-touch:tap="onResetClick"
           class="reset-btn"
           :class="getResetClass()"
           flex="~"
-
-          v-touch:tap="onResetClick" h-10 w-10 items-center justify-center border-b-1 border-r-1 border-coolgray border-rd
+          h-10
+          w-10
+          items-center
+          justify-center
+          border-b-1
+          border-r-1
+          border-coolgray
+          border-rd
           font-size-6
         >
           <div :class="faceClass" />
-          <!-- <template v-if="GM.gameState === GameState.WIN">
-            <span i-carbon-face-wink />
-          </template>
-          <template
-            v-else-if="
-              GM.gameState === GameState.LOSE ||
-              GM.gameState === GameState.CHEAT
-            "
-          >
-            <span i-carbon-face-dizzy />
-          </template>
-          <template v-else>
-            <span i-carbon-face-satisfied />
-          </template> -->
         </button>
       </div>
       <div class="info-right" w-35 flex-grow-1>
@@ -281,10 +279,9 @@ watchEffect(() => {
             w-8
             items-center
             justify-center
-            border-b-3
-            border-r-3
-            border-rd
-            shadow-sm
+            border-b-1
+            border-r-1
+            border-coolgray
             :class="getToggleDigClass()"
             @click="onDigClick(true)"
           >
@@ -299,10 +296,9 @@ watchEffect(() => {
             w-8
             items-center
             justify-center
-            border-b-3
-            border-r-3
-            border-rd
-            shadow-sm
+            border-b-1
+            border-r-1
+            border-coolgray
             :class="getToggleFlagClass()"
             @click="onDigClick(false)"
           >
@@ -433,13 +429,13 @@ watchEffect(() => {
 
 <style>
 .game-container {
-  margin-top: 7rem;
+  margin-top: 1rem;
   width: 100vw;
   max-width: 80rem;
 }
 
 .info-container {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .desc-container {

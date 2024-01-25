@@ -20,7 +20,7 @@ const { profile } = sourceData
 </script>
 
 <template>
-  <div class="profile" mt-20 text-left>
+  <div class="profile" mt-2 text-left>
     <div class="bg-container" pointer-events-none fixed left-0 top-0 z--1>
       <Background />
     </div>

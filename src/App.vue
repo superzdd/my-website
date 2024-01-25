@@ -12,7 +12,7 @@ import TheHeader from '~/components/TheHeader.vue'
     text="center gray-700 dark:gray-200"
     style="background-color: rgba(0, 0, 0, 0)"
   >
-    <TheHeader fixed z-99 w-screen flex p-2 />
+    <TheHeader z-99 w-screen flex p-2 />
     <!-- <RouterView flex flex-grow flex-col self-center p-5 /> -->
     <RouterView class="main-content" />
     <TheFooter mt-20 flex />
