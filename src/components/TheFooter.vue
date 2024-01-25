@@ -9,7 +9,7 @@ function darkChange() {
 </script>
 
 <template>
-  <nav mt-6 inline-flex gap-2 text-xl>
+  <nav inline-flex gap-2 text-xl>
     <button icon-btn @click="darkChange">
       <div i-carbon-sun dark:i-carbon-moon />
     </button>

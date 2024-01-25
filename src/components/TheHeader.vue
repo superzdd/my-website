@@ -1,6 +1,9 @@
-import { Z_DEFLATED } from 'zlib';
 <script setup>
 import MyLogo from '~/components/MyLogo.vue'
+
+// function getLinkClass() {
+//   return "bg-white-600/40 hover:bg-gray-100"
+// }
 </script>
 
 <template>
@@ -10,16 +13,25 @@ import MyLogo from '~/components/MyLogo.vue'
         <MyLogo />
       </router-link>
     </div>
-    <div class="container-right" flex="~" flex-items-center font-size-5>
+    <div class="container-right" flex="~" flex-items-center font-size-6>
       <router-link to="/personal/mineSweeper">
-        <span i-carbon-game-console>game</span>
+        <span class="icon-link" i-carbon-game-console>game</span>
       </router-link>
     </div>
   </div>
 </template>
 
 <style>
-#header {
-  /* background-color: #fff; */
+.icon-link {
+  transition: 0.5s;
+}
+
+.icon-link:hover {
+  /* color: rgba(200, 0, 0, 1); */
+  /* transform: scale(1.1); */
+}
+
+.router-link-exact-active {
+  color: rgba(200, 0, 0, 1);
 }
 </style>

@@ -7,14 +7,15 @@ import TheHeader from '~/components/TheHeader.vue'
     h-screen
     flex
     flex-col
+    items-center
     font-sans
     text="center gray-700 dark:gray-200"
     style="background-color: rgba(0, 0, 0, 0)"
   >
-    <TheHeader absolute z-99 w-screen flex p-2 />
+    <TheHeader fixed z-99 w-screen flex p-2 />
     <!-- <RouterView flex flex-grow flex-col self-center p-5 /> -->
-    <RouterView />
-    <TheFooter flex p-5 />
+    <RouterView class="main-content" />
+    <TheFooter mt-20 flex />
   </main>
 </template>
 
@@ -26,14 +27,13 @@ import TheHeader from '~/components/TheHeader.vue'
 }
 
 .main-content {
-  flex: 1;
+  /* flex: 1;
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding: 1.25rem;
-}
-
-/* Media queries for responsive design */
-@media screen and (max-width: 600px) {
+  padding: 1.25rem; */
+  max-width: 95vw;
+  /* min-height: 10vh; */
+  /* overflow-x: hidden; */
 }
 </style>
