@@ -1,5 +1,6 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import TheHeader from '~/components/TheHeader.vue'
+import TheFooter from '~/components/TheFooter.vue'
 </script>
 
 <template>

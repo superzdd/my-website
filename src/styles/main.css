@@ -4,8 +4,13 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 
 html.dark {
   background: #121212;
+}
+
+.markdown-body {
+  text-align: left !important;
 }
