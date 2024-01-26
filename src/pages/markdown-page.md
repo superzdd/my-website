@@ -228,6 +228,7 @@ export default defineConfig({
     // VueRouter需新增配置{ extensions: [".vue", ".md"] }
     // https://github.com/posva/unplugin-vue-router
     VueRouter({ extensions: [".vue", ".md"] }),
+  ],
 })
 ```
 
