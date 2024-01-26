@@ -1,6 +1,8 @@
+/_ eslint-disable _/
+
 # [Vue3] 使用MarkDown文件做页面
 
-分享下如何通过`MardDown`(.md)文件直接生成页面内容的方法。
+分享下如何通过`MarkDown`(.md)文件直接生成页面内容的方法。
 
 ## 呈现形式
 
@@ -18,8 +20,9 @@
 |    |--- App.vue
 ```
 
-2. 编译`nr dev`(即`npm/pnpm/yarn run dev`)，通过`domian/code-repo-exchange`即可访问：
-   ![url-view.png](https://upload-images.jianshu.io/upload_images/5338196-b4efa137c5d48e23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+2. 编译`nr dev`(即`npm/pnpm/yarn run dev`)，通过`domain/code-repo-exchange`即可访问：
+
+<img style="width:40vw; height:auto;" src="/blogs/code-repo-exchange/url-view.png"/>
 
 [体验地址](https://vocal-florentine-2d647c.netlify.app/code-repo-exchange)
 ~网站样式没有全部调整完，夜间模式会有小问题~
@@ -30,7 +33,7 @@
 
 Vue3 | VueRouter | Vite | vitesse | Typescript
 
-```json
+```js
 "dependencies": {
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
@@ -47,7 +50,7 @@ Vue3 | VueRouter | Vite | vitesse | Typescript
 
 下方提到的内容都要添加：
 
-```json
+```js
 // package.json
 "devDependencies": {
     "@unhead/vue": "^1.8.10",                  // vue中给markdown文件添加header
@@ -157,7 +160,7 @@ app.use(head) // <--
 ## 实现思路
 
 为了实现以上效果，需要集成3个主要技术到项目中：
-![mind.png](https://upload-images.jianshu.io/upload_images/5338196-aa8daaf1b5f18ac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img style="width:40vw; height:auto;" src="/blogs/code-repo-exchange/mind.png"/>
 
 ### 1. markdown核心
 
@@ -182,6 +185,7 @@ app.use(head) // <--
 这4个库为`markdown`进行解析，提供渲染形式的样式库。没有这几个库的话，`markdown-it`只会渲染到页面上一些平平的文字，并没有字体大小或颜色高亮。
 
 重点在下面这行配置
+<img style="width:40vw; height:auto;" src="/blogs/code-repo-exchange/markdown-class.png"/>
 
 ```
 // vite.config.ts
@@ -228,7 +232,6 @@ export default defineConfig({
     // VueRouter需新增配置{ extensions: [".vue", ".md"] }
     // https://github.com/posva/unplugin-vue-router
     VueRouter({ extensions: [".vue", ".md"] }),
-  ],
 })
 ```
 
@@ -260,7 +263,7 @@ export default {
 
 我的项目本身基于[vitesse-lite](https://github.com/antfu/vitesse-lite)，可能有更优雅的解法。
 
-- @unhead/vue： 这个库是为了给.md加上<head>头，但目前我项目里还没用上
+- `@unhead/vue`： 这个库是为了给`*.md`加上`<head>`头，但目前我项目里还没用上
 
 ## 总结
 

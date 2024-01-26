@@ -1,6 +1,6 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 const blogs = [
-  { name: '[Vue3] 使用MarkDown文件做页面', link: 'code-repo-exchange' },
+  { name: '[Vue3] 使用MarkDown文件做页面', link: 'markdown-page' },
   {
     name: '代码仓库迁移：从 Github 到 Gitee',
     link: 'code-repo-exchange',

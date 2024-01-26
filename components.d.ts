@@ -10,7 +10,6 @@ declare module 'vue' {
     AppLink: typeof import('./src/components/AppLink.vue')['default']
     Background: typeof import('./src/components/Background.vue')['default']
     CompanyLogo: typeof import('./src/components/CompanyLogo.vue')['default']
-    copy: typeof import('./src/components/SvgDig copy.vue')['default']
     MarkDown: typeof import('./src/components/MarkDown.vue')['default']
     MyLogo: typeof import('./src/components/MyLogo.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
