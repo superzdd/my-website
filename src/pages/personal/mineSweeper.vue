@@ -44,7 +44,7 @@ const numberColors = [
 const digNow = ref(true)
 
 function getBlockClass(block: BlockState) {
-  if (block.mine && block.flagged)
+  if (block.flagged)
     return 'bg-gray-600/10'
 
   if (!block.revealed)
@@ -231,6 +231,7 @@ watchEffect(() => {
             name="sel"
             h-8
             w-26
+            color-gray-700
             border-rd
             border="1 gray-500/20"
           >

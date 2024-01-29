@@ -1,5 +1,3 @@
-/_ eslint-disable _/
-
 # [Vue3] 使用MarkDown文件做页面
 
 分享下如何通过`MarkDown`(.md)文件直接生成页面内容的方法。
@@ -125,12 +123,12 @@ export default defineConfig({
 3. main.ts 新增
 
 ```js
-import { createHead } from "@unhead/vue"
-import "github-markdown-css"
-import "highlight.js/styles/default.css"
+import { createHead } from "@unhead/vue";
+import "github-markdown-css";
+import "highlight.js/styles/default.css";
 
-const head = createHead() // <--
-app.use(head) // <--
+const head = createHead(); // <--
+app.use(head); // <--
 ```
 
 4. pages中添加\*.md文件
@@ -147,7 +145,7 @@ app.use(head) // <--
 
 ```html
 <script setup>
-  import HelloWorld from "~/pages/code-repo-exchange.md"
+  import HelloWorld from "~/pages/code-repo-exchange.md";
 </script>
 
 <template>
@@ -238,9 +236,9 @@ export default defineConfig({
 Git主页是这样的：
 
 ```js
-import Vue from "@vitejs/plugin-vue"
-import Markdown from "unplugin-vue-markdown/vite"
-import Pages from "vite-plugin-pages"
+import Vue from "@vitejs/plugin-vue";
+import Markdown from "unplugin-vue-markdown/vite";
+import Pages from "vite-plugin-pages";
 
 export default {
   plugins: [
@@ -252,7 +250,7 @@ export default {
     }),
     Markdown(),
   ],
-}
+};
 ```
 
 上图中有两个不同：
