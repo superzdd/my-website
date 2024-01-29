@@ -3,7 +3,7 @@ import sourceData from '~/data.json'
 import type { Company } from '~/composables/company'
 import AppLink from '~/components/AppLink.vue'
 import CompanyLogo from '~/components/CompanyLogo.vue'
-import Background from '~/components/Background.vue'
+// import Background from "~/components/Background.vue";
 
 const companies: Company[] = [
   { name: '万达信息股份有限公司', imgSrc: '/imgs/wonders.png' },
@@ -21,9 +21,9 @@ const { profile } = sourceData
 
 <template>
   <div class="profile" mt-2 text-left>
-    <div class="bg-container" pointer-events-none fixed left-0 top-0 z--1>
+    <!-- <div class="bg-container" pointer-events-none fixed left-0 top-0 z--1>
       <Background />
-    </div>
+    </div> -->
     <div class="my-name" z-1>
       <h1 font-size-7 font-bold>
         {{ profile.name }}
@@ -52,9 +52,7 @@ const { profile } = sourceData
       </p>
     </div>
     <div class="collection" z-1>
-      <p class="sub-title">
-        代码仓库及博客
-      </p>
+      <p class="sub-title">代码仓库及博客</p>
       <p flex="~ gap-3 wrap">
         <AppLink to="https://github.com/superzdd">
           <span i-simple-icons-github />&nbsp;GitHub
@@ -73,12 +71,10 @@ const { profile } = sourceData
     </div>
 
     <div class="contact" z-1>
-      <p class="sub-title">
-        联系方式
-      </p>
+      <p class="sub-title">联系方式</p>
       <p flex="~ gap-3" flex-col>
         <span>请扫描下方二维码</span>
-        <img h-48 w-48 src="/imgs/qrcode-logo-256.png" alt="qrcode">
+        <img h-48 w-48 src="/imgs/qrcode-logo-256.png" alt="qrcode" />
       </p>
     </div>
   </div>
@@ -110,8 +106,8 @@ const { profile } = sourceData
 }
 
 .bg-container {
-  mask-image: radial-gradient(circle, transparent, black);
-  --webkit-mask-image: radial-gradient(circle, transparent, black);
+  mask-image: radial-gradient(circle, white, black);
+  --webkit-mask-image: radial-gradient(circle, white, black);
 }
 
 .sub-title {

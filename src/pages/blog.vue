@@ -1,18 +1,16 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 const blogs = [
-  { name: '[Vue3] 使用MarkDown文件做页面', link: 'markdown-page' },
+  { name: '[Vue3] 使用MarkDown文件做页面', link: '/blogs/markdown-page' },
   {
     name: '代码仓库迁移：从 Github 到 Gitee',
-    link: 'code-repo-exchange',
+    link: '/blogs/code-repo-exchange',
   },
 ]
 </script>
 
 <template>
   <div class="profile" mt-2 text-left>
-    <h2 font-size-8 class="sub-title">
-      Blogs
-    </h2>
+    <h2 font-size-8 class="sub-title">Blogs</h2>
     <div class="collection" z-1 flex flex-col justify-start>
       <p v-for="x in blogs" :key="x.name" flex="~">
         <AppLink :to="x.link">

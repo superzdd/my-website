@@ -13,12 +13,18 @@ import MyLogo from '~/components/MyLogo.vue'
         <MyLogo />
       </router-link>
     </div>
-    <div class="container-right" flex="~" flex-items-center font-size-5 font-100>
+    <div
+      class="container-right"
+      flex="~"
+      flex-items-center
+      font-size-5
+      font-100
+    >
       <router-link to="/blog">
-        <div i-carbon-document w-9 class="icon-link"/>
+        <div i-carbon-document w-9 class="icon-link" />
       </router-link>
-      <router-link to="/personal/mineSweeper">
-        <div i-carbon-game-console w-9 class="icon-link"/>
+      <router-link to="/mineSweeper">
+        <div i-carbon-game-console w-9 class="icon-link" />
       </router-link>
     </div>
   </div>
