@@ -44,6 +44,7 @@ declare module 'vue-router/auto/routes' {
     '/blog': RouteRecordInfo<'/blog', '/blog', Record<never, never>, Record<never, never>>,
     '/blogs/code-repo-exchange': RouteRecordInfo<'/blogs/code-repo-exchange', '/blogs/code-repo-exchange', Record<never, never>, Record<never, never>>,
     '/blogs/markdown-page': RouteRecordInfo<'/blogs/markdown-page', '/blogs/markdown-page', Record<never, never>, Record<never, never>>,
+    '/blogs/qrcode-origin': RouteRecordInfo<'/blogs/qrcode-origin', '/blogs/qrcode-origin', Record<never, never>, Record<never, never>>,
     '/hi/[name]': RouteRecordInfo<'/hi/[name]', '/hi/:name', { name: ParamValue<true> }, { name: ParamValue<false> }>,
     '/mineSweeper': RouteRecordInfo<'/mineSweeper', '/mineSweeper', Record<never, never>, Record<never, never>>,
     '/personal/collection': RouteRecordInfo<'/personal/collection', '/personal/collection', Record<never, never>, Record<never, never>>,

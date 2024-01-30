@@ -5,6 +5,10 @@ const blogs = [
     name: '代码仓库迁移：从 Github 到 Gitee',
     link: '/blogs/code-repo-exchange',
   },
+  {
+    name: '[AI微信二维码] Stable Diffusion生成二维码初探',
+    link: '/blogs/qrcode-origin',
+  },
 ]
 </script>
 
