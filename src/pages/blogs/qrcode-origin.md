@@ -4,37 +4,64 @@
 
 > 下面每张图里都包含了一个我自己的微信二维码，可以微信扫一扫尝试。
 
-![masterpiece,best quality,winter,snow field,blush,red flower,sky,sunset,mountain,forest,lake, (masterpiece:1.2), best quality, masterpiece, highres, original, extremely detailed wallpaper, perfect lighting,(extremely detailed CG:1.2)
-Negative prompt: easynegative,(worst quality:2),(low quality:2),(normal quality:2) verybadimagenegative_v1.3, NSFW, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((grayscale)), skin spots, acnes, skin blemishes, age spot, (ugly:1.331), (duplicate:1.331), (morbid:1.21), (mutilated:1.21), (tranny:1.331), mutated hands, (poorly drawn hands:1.5), blurry, (bad anatomy:1.21), (bad proportions:1.331), extra limbs, (disfigured:1.331), (missing arms:1.331), (extra legs:1.331), (fused fingers:1.61051), (too many fingers:1.61051), (unclear eyes:1.331), lowers, bad hands, missing fingers, extra digit,bad hands, missing fingers, (((extra arms and legs)))
-Steps: 40, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 685635532, Size: 1024x1024, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.1, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.15, Guidance End: 1, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "easynegative: c74b4e810b03", Version: v1.6.1](https://upload-images.jianshu.io/upload_images/5338196-cfd0014d31d0731c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+<img style="width:300px; height:auto;" src="/blogs/qrcode/good/01661-685635532.png"/>
 
-![masterpiece,best quality,sitting,full body,indoors,(1 mechanical girl locked on a hanger:1.5),(transparent surfaces and skins:1.5),(many mechanical gears and electronic components inside the body:1.4),(mechanical vertebra and cervial:1.3),solo,expressionless,(wires and cables attaching to head and body:1.4),(mechanical arms of surgical machine around:1.2),(Circuit boards:1.4),(character focus:1.3),science fiction, (masterpiece:1.2), best quality, masterpiece, highres, original, extremely detailed wallpaper, perfect lighting,(extremely detailed CG:1.2)
-Negative prompt: badhandv4,easynegative,verybadimagenegative_v1.3,(worst quality:2),(low quality:2),(normal quality:2),NSFW, NSFW, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((grayscale)), skin spots, acnes, skin blemishes, age spot, (ugly:1.331), (duplicate:1.331), (morbid:1.21), (mutilated:1.21), (tranny:1.331), mutated hands, (poorly drawn hands:1.5), blurry, (bad anatomy:1.21), (bad proportions:1.331), extra limbs, (disfigured:1.331), (missing arms:1.331), (extra legs:1.331), (fused fingers:1.61051), (too many fingers:1.61051), (unclear eyes:1.331), lowers, bad hands, missing fingers, extra digit,bad hands, missing fingers, (((extra arms and legs)))
-Steps: 25, Sampler: Euler a, CFG scale: 7, Seed: 4137445243, Size: 1024x1024, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ENSD: 31337, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.2, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.2, Guidance End: 0.9, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "badhandv4: 5e40d722fc3d, easynegative: 66a7279a88dd, verybadimagenegative_v1.3: d70463f87042", Version: v1.6.1](https://upload-images.jianshu.io/upload_images/5338196-7cce6025cd11fa8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+> masterpiece,best quality,winter,snow field,blush,red flower,sky,sunset,mountain,forest,lake, (masterpiece:1.2), best quality, masterpiece, highres, original, extremely detailed wallpaper, perfect lighting,(extremely detailed CG:1.2)
 
-![(masterpiece),(best quality),(ultra-detailed),photorealistic,(best illustration),(an extremely delicate and beautiful),detailed scenery,sakura,sakura trees,sakura wind,floating,diffraction spikes,sunlight,blue sky,
-BREAK
-hakama,kimono,wide sleeves,anchor,cross-laced footwear,1girl,upper body,half updo
-Negative prompt: (worst quality, low quality:1.4),fastnegativev2
-Steps: 50, Sampler: DPM++ 2M SDE Karras, CFG scale: 7, Seed: 2583313787, Size: 1024x1024, Model hash: 7f96a1a9ca, Model: anything-v5-PrtRE, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.1, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.14, Guidance End: 0.8, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "FastNegativeV2: a7465e7cc2a2", Version: v1.6.1](https://upload-images.jianshu.io/upload_images/5338196-5a0e84461c872c60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+> Negative prompt: easynegative,(worst quality:2),(low quality:2),(normal quality:2) verybadimagenegative_v1.3, NSFW, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((grayscale)), skin spots, acnes, skin blemishes, age spot, (ugly:1.331), (duplicate:1.331), (morbid:1.21), (mutilated:1.21), (tranny:1.331), mutated hands, (poorly drawn hands:1.5), blurry, (bad anatomy:1.21), (bad proportions:1.331), extra limbs, (disfigured:1.331), (missing arms:1.331), (extra legs:1.331), (fused fingers:1.61051), (too many fingers:1.61051), (unclear eyes:1.331), lowers, bad hands, missing fingers, extra digit,bad hands, missing fingers, (((extra arms and legs)))
 
-![(masterpiece),(best quality),(ultra-detailed),photorealistic,(best illustration),(an extremely delicate and beautiful),detailed scenery,sakura,sakura trees,sakura wind,floating,diffraction spikes,sunlight,blue sky,hakama,kimono,wide sleeves,anchor,cross-laced footwear,1girl,upper body,half updo
-Negative prompt: (worst quality, low quality:1.4),fastnegativev2
-Steps: 50, Sampler: DPM++ 2M SDE Karras, CFG scale: 7, Seed: 2425333477, Size: 1024x1024, Model hash: 7f96a1a9ca, Model: anything-v5-PrtRE, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.1, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.14, Guidance End: 0.8, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "FastNegativeV2: a7465e7cc2a2", Version: v1.6.1](https://upload-images.jianshu.io/upload_images/5338196-9dbdd6a9acd19467.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+> Steps: 40, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 685635532, Size: 1024x1024, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.1, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.15, Guidance End: 1, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "easynegative: c74b4e810b03", Version: v1.6.1
 
-![(1girl:1.2),masterpiece,best quality,falling from the sky,clouds,balloons,clenched fist,upper_body,maid,flying skirt,pleated dress
-Negative prompt: NSFW,badhandv4,easynegative,verybadimagenegative_v1.3,(worst quality:2),(low quality:2),(normal quality:2),(multiple_girls:1.3)
-Steps: 55, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 2866753152, Size: 768x768, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.2, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.1, Guidance End: 0.9, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "badhandv4: 5e40d722fc3d, easynegative: 66a7279a88dd, verybadimagenegative_v1.3: d70463f87042", Version: v1.6.1](https://upload-images.jianshu.io/upload_images/5338196-c6b43c799a6e6945.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+<img style="width:300px; height:auto;" src="/blogs/qrcode/good/01682-4137445243.png"/>
 
-![(1gril:1.5),library,bow head,writing,paper,flying paper,masterpiece,upper_body,best quality,(masterpiece:1.2),best quality,perfect lighting,(extremely detailed CG:1.2)
-Negative prompt: NSFW,badhandv4,easynegative,verybadimagenegative_v1.3,(worst quality:2),(low quality:2),(normal quality:2)
-Steps: 50, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 2292622729, Size: 768x768, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.2, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.11, Guidance End: 1, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "badhandv4: 5e40d722fc3d, easynegative: 66a7279a88dd, verybadimagenegative_v1.3: d70463f87042", Version: v1.6.1](https://upload-images.jianshu.io/upload_images/5338196-7986654205a9e3e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+> masterpiece,best quality,sitting,full body,indoors,(1 mechanical girl locked on a hanger:1.5),(transparent surfaces and skins:1.5),(many mechanical gears and electronic components inside the body:1.4),(mechanical vertebra and cervial:1.3),solo,expressionless,(wires and cables attaching to head and body:1.4),(mechanical arms of surgical machine around:1.2),(Circuit boards:1.4),(character focus:1.3),science fiction, (masterpiece:1.2), best quality, masterpiece, highres, original, extremely detailed wallpaper, perfect lighting,(extremely detailed CG:1.2)
 
-![(1girl:1.2),masterpiece,best quality,falling from the sky,clouds,balloons,clenched fist,upper_body,maid,flying skirt,pleated dress
-Negative prompt: NSFW,badhandv4,easynegative,verybadimagenegative_v1.3,(worst quality:2),(low quality:2),(normal quality:2),(multiple_girls:1.3)
-Steps: 55, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 2866753143, Size: 768x768, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.2, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.1, Guidance End: 0.9, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "badhandv4: 5e40d722fc3d, easynegative: 66a7279a88dd, verybadimagenegative_v1.3: d70463f87042", Version: v1.6.1](https://upload-images.jianshu.io/upload_images/5338196-683cd8564815004e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+> Negative prompt: badhandv4,easynegative,verybadimagenegative_v1.3,(worst quality:2),(low quality:2),(normal quality:2),NSFW, NSFW, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((grayscale)), skin spots, acnes, skin blemishes, age spot, (ugly:1.331), (duplicate:1.331), (morbid:1.21), (mutilated:1.21), (tranny:1.331), mutated hands, (poorly drawn hands:1.5), blurry, (bad anatomy:1.21), (bad proportions:1.331), extra limbs, (disfigured:1.331), (missing arms:1.331), (extra legs:1.331), (fused fingers:1.61051), (too many fingers:1.61051), (unclear eyes:1.331), lowers, bad hands, missing fingers, extra digit,bad hands, missing fingers, (((extra arms and legs)))
 
-![原版二维码](https://upload-images.jianshu.io/upload_images/5338196-4a302dd178680610.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+> Steps: 25, Sampler: Euler a, CFG scale: 7, Seed: 4137445243, Size: 1024x1024, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ENSD: 31337, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.2, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.2, Guidance End: 0.9, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "badhandv4: 5e40d722fc3d, easynegative: 66a7279a88dd, verybadimagenegative_v1.3: d70463f87042", Version: v1.6.1
+
+<img style="width:300px; height:auto;" src="/blogs/qrcode/good/01708-2583313787.png"/>
+
+> (masterpiece),(best quality),(ultra-detailed),photorealistic,(best illustration),(an extremely delicate and beautiful),detailed scenery,sakura,sakura trees,sakura wind,floating,diffraction spikes,sunlight,blue sky,
+> hakama,kimono,wide sleeves,anchor,cross-laced footwear,1girl,upper body,half updo
+> Negative prompt: (worst quality, low quality:1.4),fastnegativev2
+> Steps: 50, Sampler: DPM++ 2M SDE Karras, CFG scale: 7, Seed: 2583313787, Size: 1024x1024, Model hash: 7f96a1a9ca, Model: anything-v5-PrtRE, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.1, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.14, Guidance End: 0.8, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "FastNegativeV2: a7465e7cc2a2", Version: v1.6.1
+
+<img style="width:300px; height:auto;" src="/blogs/qrcode/good/01714-2425333477.png"/>
+
+> (masterpiece),(best quality),(ultra-detailed),photorealistic,(best illustration),(an extremely delicate and beautiful),detailed scenery,sakura,sakura trees,sakura wind,floating,diffraction spikes,sunlight,blue sky,hakama,kimono,wide sleeves,anchor,cross-laced footwear,1girl,upper body,half updo
+
+> Negative prompt: (worst quality, low quality:1.4),fastnegativev2
+
+> Steps: 50, Sampler: DPM++ 2M SDE Karras, CFG scale: 7, Seed: 2425333477, Size: 1024x1024, Model hash: 7f96a1a9ca, Model: anything-v5-PrtRE, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.1, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.14, Guidance End: 0.8, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "FastNegativeV2: a7465e7cc2a2", Version: v1.6.1
+
+<img style="width:300px; height:auto;" src="/blogs/qrcode/good/01824-2292622729.png"/>
+
+> (1girl:1.2),masterpiece,best quality,falling from the sky,clouds,balloons,clenched fist,upper_body,maid,flying skirt,pleated dress
+
+> Negative prompt: NSFW,badhandv4,easynegative,verybadimagenegative_v1.3,(worst quality:2),(low quality:2),(normal quality:2),(multiple_girls:1.3)
+
+> Steps: 55, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 2866753152, Size: 768x768, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.2, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.1, Guidance End: 0.9, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "badhandv4: 5e40d722fc3d, easynegative: 66a7279a88dd, verybadimagenegative_v1.3: d70463f87042", Version: v1.6.1
+
+<img style="width:300px; height:auto;" src="/blogs/qrcode/good/01952-2866753143.png"/>
+
+> (1gril:1.5),library,bow head,writing,paper,flying paper,masterpiece,upper_body,best quality,(masterpiece:1.2),best quality,perfect lighting,(extremely detailed CG:1.2)
+
+> Negative prompt: NSFW,badhandv4,easynegative,verybadimagenegative_v1.3,(worst quality:2),(low quality:2),(normal quality:2)
+
+> Steps: 50, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 2292622729, Size: 768x768, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.2, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.11, Guidance End: 1, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "badhandv4: 5e40d722fc3d, easynegative: 66a7279a88dd, verybadimagenegative_v1.3: d70463f87042", Version: v1.6.1
+
+<img style="width:300px; height:auto;" src="/blogs/qrcode/good/01961-2866753152.png"/>
+
+> (1girl:1.2),masterpiece,best quality,falling from the sky,clouds,balloons,clenched fist,upper_body,maid,flying skirt,pleated dress
+
+> Negative prompt: NSFW,badhandv4,easynegative,verybadimagenegative_v1.3,(worst quality:2),(low quality:2),(normal quality:2),(multiple_girls:1.3)
+
+> Steps: 55, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 2866753143, Size: 768x768, Model hash: e3edb8a26f, Model: ghostmix_v20Bakedvae, Clip skip: 2, ControlNet 0: "Module: none, Model: qrCodeMonster_v20 [5e5778cb], Weight: 1.2, Resize Mode: Crop and Resize, Low Vram: False, Guidance Start: 0.1, Guidance End: 0.9, Pixel Perfect: True, Control Mode: Balanced, Hr Option: Both, Save Detected Map: True", TI hashes: "badhandv4: 5e40d722fc3d, easynegative: 66a7279a88dd, verybadimagenegative_v1.3: d70463f87042", Version: v1.6.1
+
+<img style="width:300px; height:auto;" src="/blogs/qrcode/wx-qrcode.png"/>
+
+> 原版二维码
 
 PS： 最后两个`AI微信码`只能通过微信扫一扫识别，微信长按不识别
 
@@ -49,7 +76,8 @@ PS： 最后两个`AI微信码`只能通过微信扫一扫识别，微信长按�
 ### 原理：使用ControlNet生成二维码
 
 在ControlNet中，启用名为`qrcode_monster`的模型即可，该方法在文生图，图生图中都适用。~（模型下载在文章最后）~
-![启用qrcode_monster，同时请注意`完美像素模式`和`预处理器`的选项也要正确](https://upload-images.jianshu.io/upload_images/5338196-2071b04c5d7a2db5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+<img style="width:300px; height:auto;" src="/blogs/qrcode/controlnet-qrmonster.png" alt="启用qrcode_monster，同时请注意完美像素模式和预处理器的选项也要正确"/>
 
 但是，仅启用`qrcode_monster`而不作其他配置是得不到很好的出图效果的，甚至大量抽卡也出不了一张好图。
 
@@ -77,21 +105,16 @@ PS： 最后两个`AI微信码`只能通过微信扫一扫识别，微信长按�
 因为内容和复杂程度成正比，内容越多，二维码就越复杂，而且尺寸也会更大。
 
 示例：
-我的微信二维码：
-
-![https://u.wechat.com/EG_bCXW2LMFTzcUSCKWTHVI](https://upload-images.jianshu.io/upload_images/5338196-2727d73b8b56fde5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
-
-微信二维码短网址：
-
-![https://reurl.cc/yYDGQ6](https://upload-images.jianshu.io/upload_images/5338196-381766c777e8460c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 简单文本：
 
-![纯文本：superzdd](https://upload-images.jianshu.io/upload_images/5338196-1826887857d0c3cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+纯文本：superzdd
+
+<img style="width:300px; height:auto;" src="/blogs/qrcode/plain-text-superzdd.png" alt="superzdd"/>
 
 超长文本：
 
-![In the shadowy realm of Middle-earth, the legacy of Gondor shines bright. This famed realm, once a beacon of hope in the Age of Kings, now stands as a testament to the enduring power of the spirit. Its towering spires and intricate stonework speak of a civilization that weathered the ages and emerged stronger than ever.](https://upload-images.jianshu.io/upload_images/5338196-4b7b04af0eff095d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img style="width:300px; height:auto;" src="/blogs/qrcode/lord-of-ring.png" alt="superzdd"/>
 
 二维码里黑白格子密度太高，将导致图片生成受控太多，不仅出不来想要的效果，而且更容易使物体变形，错位。像上面这个超长文本，AI不可能画出好看的内容。
 
@@ -117,7 +140,8 @@ PS： 最后两个`AI微信码`只能通过微信扫一扫识别，微信长按�
 难道我需要不停变换短网址，直到生成我满意的位置吗？
 其实，二维码有**`八种`**生成方式（对应八个掩码），但常见的二维码生成器只提供一种，并不会有很多选择，比如：[草料二维码](https://cli.im/)
 直到我遇见了[这个网站](https://qrcode.antfu.me/)，才豁然开朗。在这个网站中，你可以比较这8种方式生成的二维码的区别，最后选一个看起来最优的最为最终`ControlNet`参考图片：
-![mask-pattern.png](https://upload-images.jianshu.io/upload_images/5338196-f39b5fb25b431250.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+<img style="width:800px; height:auto;" src="/blogs/qrcode/mask-pattern.png" alt="superzdd"/>
 
 当然，`八种`都要也是可以的~
 
@@ -126,10 +150,10 @@ PS: 最近成了`Anthony Fu`的粉丝，大佬手撸的工具真的太强
 ##### 1.3. 选择与主题的契合度高的二维码样式
 
 二维码总是方块形状的，这样对于题材发挥其实很不利，比如，篮球，汽车，耳机这类图片，更容易联想到圆形而不是正方形。比如：
-![00007-1149952674-A RAW photo of one basketball,basket ball on the asphalt ground,sunlight,sweater,red brick wall,architectural photography,hyperr.jpg](https://upload-images.jianshu.io/upload_images/5338196-ed86c0062c90312c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+<img style="width:300px; height:auto;" src="/blogs/qrcode/bad/02858-1149952677.png" alt="superzdd"/>
 
 要生成这类的二维码，还是需要[这个网站](https://qrcode.antfu.me/)
-![image.png](https://upload-images.jianshu.io/upload_images/5338196-4b9b6746a7b1cfdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img style="width:800px; height:auto;" src="/blogs/qrcode/qrcode-shape.png" alt="superzdd"/>
 
 为了让AI能顺利达到想要的效果，
 
@@ -146,9 +170,10 @@ PS: 最近成了`Anthony Fu`的粉丝，大佬手撸的工具真的太强
 
 参考这样的图片，需要准备这样的二维码：
 
-![调整qrcode margin.png](https://upload-images.jianshu.io/upload_images/5338196-eb1689dcb7d671fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img style="width:800px; height:auto;" src="/blogs/qrcode/antfu-1.png" alt="antfu"/>
+> copy from https://antfu.me/posts/ai-qrcode-101
 
-![调整qrcode margin](https://upload-images.jianshu.io/upload_images/5338196-7560e42bb591b3f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img style="width:800px; height:auto;" src="/blogs/qrcode/qrcode-custom.png" alt="qrcode-custom"/>
 
 实测下来，生成效果堪忧。即使图片大片留白，给了AI更大的绘画空间，但实际效果乏善可陈，只能说明留白并不能是AI作画更容易，其中还有许多参数需要调整。由于质量太差，我就不放图片了
 
@@ -161,7 +186,7 @@ PS: 最近成了`Anthony Fu`的粉丝，大佬手撸的工具真的太强
 
 以下这些情况在出图时，是经常发生的：多头，多手，姿势扭曲，局部扭曲等：
 
-![bad-merge.png](https://upload-images.jianshu.io/upload_images/5338196-d6a1417a4b51c4cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img style="width:800px; height:auto;" src="/blogs/qrcode/bad/bad-merge.png"/>
 
 另外，当前女孩之外的`checkpoint`和`lora`也不多，即便在没有二维码的影响下，也不一定能出好图。何况下载，调试，预抽卡都需要时间，导致真正能出一组效果过得去的二维码也要花费不少心力，这不是一个立马见效的流程。
 
@@ -170,8 +195,10 @@ PS: 最近成了`Anthony Fu`的粉丝，大佬手撸的工具真的太强
 1. 要有耐心，做好3,4天调试细节，不断试错的准备
 2. 每批最好出4张图，保证其中一张可以扫二维码，不然就调整参数重来，否则批量抽卡时很难保证二维码和人都同时正确。
 3. 人物动作和扭曲在二维码加持下，比正常出图错误率要高得多。这种情况下推荐修改 `引导介入时机`和`迭代步数` - `引导介入时机`和`步数`可以同时增加，为的是在`ControlNet`介入前，尽量将人的肢体草稿画好。- `引导介入时机`尝试从`0.1`开始递增，`迭代步数`尝试从`40`开始递增 - 但不要轻易增加`CFG Scale`，建议仍然保持`7`。
-   ![引导介入时机](https://upload-images.jianshu.io/upload_images/5338196-a224261ede936218.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
-   ![迭代步数](https://upload-images.jianshu.io/upload_images/5338196-323a646f18af170f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+
+   <img style="width:800px; height:auto;" src="/blogs/qrcode/controlnet-start.png"/>
+    
+   <img style="width:800px; height:auto;" src="/blogs/qrcode/steps.png"/>
 
 ### 3. 其他参数推荐
 
@@ -205,7 +232,8 @@ PS: 最近成了`Anthony Fu`的粉丝，大佬手撸的工具真的太强
 - 控制权重，推荐1.1~1.25
 - 引导引入时机，越大越好，推荐0.1~0.2
 - 引导停止时机，越小越好，推荐0.8~0.9
-  ![ControlNet权重](https://upload-images.jianshu.io/upload_images/5338196-a224261ede936218.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+
+  <img style="width:800px; height:auto;" src="/blogs/qrcode/controlnet-start.png"/>
 
 ## 写在最后
 
