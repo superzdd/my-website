@@ -117,7 +117,7 @@ export default defineConfig({
     // VueRouter需新增配置{ extensions: [".vue", ".md"] }
     // https://github.com/posva/unplugin-vue-router
     VueRouter({ extensions: [".vue", ".md"] }),
-})
+});
 ```
 
 3. main.ts 新增
@@ -127,8 +127,8 @@ import { createHead } from "@unhead/vue";
 import "github-markdown-css";
 import "highlight.js/styles/default.css";
 
-const head = createHead() // <--
-app.use(head) // <--
+const head = createHead(); // <--
+app.use(head); // <--
 ```
 
 4. pages中添加\*.md文件
@@ -145,7 +145,7 @@ app.use(head) // <--
 
 ```html
 <script setup>
-  import HelloWorld from "~/pages/code-repo-exchange.md"
+  import HelloWorld from "~/pages/code-repo-exchange.md";
 </script>
 
 <template>
@@ -193,7 +193,7 @@ export default defineConfig({
       // Class names for the wrapper div
       wrapperClasses: "markdown-body", // markdown-body是一个class类，将和github-markdown-css包对应
     })
-]})
+]});
 ```
 
 上文中的这个`markdown-body`，会伴随整个markdown文档加载到DOM的class中，但并没有为其定义具体的css样式。
@@ -230,15 +230,15 @@ export default defineConfig({
     // VueRouter需新增配置{ extensions: [".vue", ".md"] }
     // https://github.com/posva/unplugin-vue-router
     VueRouter({ extensions: [".vue", ".md"] }),
-})
+});
 ```
 
 Git主页是这样的：
 
 ```js
-import Vue from "@vitejs/plugin-vue"
-import Markdown from "unplugin-vue-markdown/vite"
-import Pages from "vite-plugin-pages"
+import Vue from "@vitejs/plugin-vue";
+import Markdown from "unplugin-vue-markdown/vite";
+import Pages from "vite-plugin-pages";
 
 export default {
   plugins: [
@@ -250,7 +250,7 @@ export default {
     }),
     Markdown(),
   ],
-}
+};
 ```
 
 上图中有两个不同：
