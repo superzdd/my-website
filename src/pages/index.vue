@@ -3,6 +3,7 @@ import sourceData from '~/data.json'
 import type { Company } from '~/composables/company'
 import AppLink from '~/components/AppLink.vue'
 import CompanyLogo from '~/components/CompanyLogo.vue'
+
 // import Background from "~/components/Background.vue";
 
 const companies: Company[] = [
@@ -52,7 +53,9 @@ const { profile } = sourceData
       </p>
     </div>
     <div class="collection" z-1>
-      <p class="sub-title">代码仓库及博客</p>
+      <p class="sub-title">
+        代码仓库及博客
+      </p>
       <p flex="~ gap-3 wrap">
         <AppLink to="https://github.com/superzdd">
           <span i-simple-icons-github />&nbsp;GitHub
@@ -71,10 +74,16 @@ const { profile } = sourceData
     </div>
 
     <div class="contact" z-1>
-      <p class="sub-title">联系方式</p>
+      <p class="sub-title">
+        联系方式
+      </p>
       <p flex="~ gap-3" flex-col>
-        <span>请扫描下方二维码</span>
-        <img h-48 w-48 src="/imgs/qrcode-logo-256.png" alt="qrcode" />
+        <span>请扫描下方微信二维码，
+          <AppLink to="/blogs/qrcode-origin">
+            <span style="text-decoration: underline" underline-solid>由AI生成</span>
+          </AppLink>
+        </span>
+        <img h-48 w-48 src="/imgs/qrcode-logo-256.png" alt="qrcode">
       </p>
     </div>
   </div>

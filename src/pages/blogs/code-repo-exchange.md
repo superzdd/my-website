@@ -80,6 +80,23 @@ From https://gitee.com/superzdd/my-website
 git branch --set-upstream-to=my-website main
 ```
 
+> 注意：如果刚才设置的本地仓库名为`origin`，那上面这句话要修改为：
+
+```bash
+# 查看远端分支
+>>> git branch -r
+
+origin/dependabot/npm_and_yarn/tvp-vue-demo/ws-6.2.2
+origin/dependabot/npm_and_yarn/tvp-vue-demo/y18n-3.2.2
+origin/master
+
+# 将本地的origin/master 关联到远端origin/master分支
+>>> git branch --set-upstream-to=origin/master
+
+# 如果远端分支叫main
+>>> git branch --set-upstream-to=origin/main
+```
+
 ## Git pull 拉取代码
 
 这时所有的切换动作已经都做完了，可以尝试拉取代码

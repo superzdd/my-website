@@ -1,7 +1,13 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import TheHeader from '~/components/TheHeader.vue'
 import TheFooter from '~/components/TheFooter.vue'
+
 // import Background from "~/components/Background.vue";
+
+const viewShow = ref(false)
+onMounted(() => {
+  viewShow.value = true
+})
 </script>
 
 <template>
@@ -17,9 +23,11 @@ import TheFooter from '~/components/TheFooter.vue'
     <div class="bg-container" pointer-events-none fixed left-0 top-0 z--1>
       <Background />
     </div>
-    <TheHeader z-99 w-screen flex p-2 z-1 />
-    <RouterView class="main-content" z-1 />
-    <TheFooter mt-20 flex z-1 />
+    <TheHeader z-1 z-99 w-screen flex p-2 />
+    <Transition name="fade">
+      <RouterView v-show="viewShow" class="main-content" z-1 />
+    </Transition>
+    <TheFooter z-1 mt-20 flex />
   </main>
 </template>
 
@@ -31,14 +39,7 @@ import TheFooter from '~/components/TheFooter.vue'
 }
 
 .main-content {
-  /* flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  padding: 1.25rem; */
   max-width: 95vw;
-  /* min-height: 10vh; */
-  /* overflow-x: hidden; */
 }
 
 .bg-container canvas {
@@ -55,5 +56,15 @@ import TheFooter from '~/components/TheFooter.vue'
   -webkit-mask-mode: alpha;
   -moz-mask-mode: alpha;
   -ms-mask-mode: alpha;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

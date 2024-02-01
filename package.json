@@ -40,6 +40,7 @@
     "markdown-it-highlightjs": "^4.0.1",
     "markdown-it-prism": "^2.3.0",
     "pnpm": "^8.11.0",
+    "shikiji": "^0.10.2",
     "simple-git-hooks": "^2.9.0",
     "taze": "^0.13.0",
     "typescript": "^5.3.3",

@@ -73,9 +73,9 @@ PS:
 // vite.config.ts
 
 // Markdown related
-import Markdown from "unplugin-vue-markdown/vite"
-import MarkdownItAnchor from "markdown-it-anchor"
-import markdownItHighlightjs from "markdown-it-highlightjs"
+import Markdown from "unplugin-vue-markdown/vite";
+import MarkdownItAnchor from "markdown-it-anchor";
+import markdownItHighlightjs from "markdown-it-highlightjs";
 
 export default defineConfig({
   plugins: [
@@ -127,8 +127,8 @@ import { createHead } from "@unhead/vue";
 import "github-markdown-css";
 import "highlight.js/styles/default.css";
 
-const head = createHead(); // <--
-app.use(head); // <--
+const head = createHead() // <--
+app.use(head) // <--
 ```
 
 4. pages中添加\*.md文件
@@ -145,7 +145,7 @@ app.use(head); // <--
 
 ```html
 <script setup>
-  import HelloWorld from "~/pages/code-repo-exchange.md";
+  import HelloWorld from "~/pages/code-repo-exchange.md"
 </script>
 
 <template>
@@ -236,9 +236,9 @@ export default defineConfig({
 Git主页是这样的：
 
 ```js
-import Vue from "@vitejs/plugin-vue";
-import Markdown from "unplugin-vue-markdown/vite";
-import Pages from "vite-plugin-pages";
+import Vue from "@vitejs/plugin-vue"
+import Markdown from "unplugin-vue-markdown/vite"
+import Pages from "vite-plugin-pages"
 
 export default {
   plugins: [
@@ -250,7 +250,7 @@ export default {
     }),
     Markdown(),
   ],
-};
+}
 ```
 
 上图中有两个不同：
@@ -272,7 +272,11 @@ export default {
 ## 附录
 
 [体验地址](https://vocal-florentine-2d647c.netlify.app/code-repo-exchange)
+
 [项目base->vitesse-lite](https://github.com/antfu/vitesse-lite)
+
 [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)
+
 [unplugin-vue-markdown](https://github.com/unplugin/unplugin-vue-markdown?tab=readme-ov-file)
+
 [antfu大佬个人网站](https://github.com/antfu/antfu.me)

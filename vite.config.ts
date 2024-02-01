@@ -12,7 +12,6 @@ import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Markdown from 'unplugin-vue-markdown/vite'
 import MarkdownItAnchor from 'markdown-it-anchor'
-import markdownItHighlightjs from 'markdown-it-highlightjs'
 
 export default defineConfig({
   resolve: {
@@ -26,6 +25,7 @@ export default defineConfig({
     }),
     Markdown({
       headEnabled: true,
+      wrapperClasses: 'markdown-body',
       // markdownItUses: [prism],// default options passed to markdown-it
       // see: https://markdown-it.github.io/markdown-it/
       markdownItOptions: {
@@ -33,14 +33,12 @@ export default defineConfig({
         linkify: true,
         typographer: true,
       },
+      // Class names for the wrapper div
       // A function providing the Markdown It instance gets the ability to apply custom settings/plugins
       markdownItSetup(md) {
         // for example
         md.use(MarkdownItAnchor)
-        md.use(markdownItHighlightjs)
       },
-      // Class names for the wrapper div
-      wrapperClasses: 'markdown-body',
     }),
     // VueMacros({
     //   defineOptions: false,
